@@ -206,13 +206,36 @@ header a {
     background-color: #012326;
     color: black;
     border-top: 3px #F29F05 solid;
-    
+    margin-top: 100px;
 }
 
 #logo_rodape {
-    padding: 50px;
+    padding: 40px;
     display: flex;
-    justify-content: space-around;
-    position: relative;
+    justify-content: center;
+}  
 
+#informacoes_rodape p {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.caixaExterna {
+    background-color: #ffffff85;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin: 8% 0 0 25%;    
+}
+
+#areaFormulario {
+    display: inline-block;
+    justify-content: center;
+}
+
+#areaLogin {
+    display: inline-block;
+    justify-content: center;
 }
