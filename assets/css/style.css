@@ -87,19 +87,19 @@ header a {
 }
 
 #txt_sobre {
-    background-color: #d99379b0;
-    color: white;
+    background-color: #00171a;
+    color: #e3b862;
     margin: 0 100px 0 100px;
     text-align: center;
     border-radius: 8px;
     padding: 10px 10px 10px 10px;
-    box-shadow: 0px 5px 5px black;
+    box-shadow: 0px 10px 40px #0c0c0cbb;
 
 
 }
 
 #txt_materias {
-    color: white;
+    color: #e3b862;
     align-items: center;
     text-align: center;
     padding: 100px 100px 100px 100px;
@@ -108,23 +108,22 @@ header a {
 }
 
 #txt_materias h1 {
-    
-    background-color: #d99379b0;
-    color: white;
+    background-color: #00171a;
+    color: #e3b862;
     margin: 0 100px 0 100px;
     padding: 10px 10px 10px 10px;
     align-items: center;
     border-radius: 8px;
-    box-shadow: 0px 5px 5px black;
+    box-shadow: 0px 10px 40px #0c0c0cbb;
 
 }
 
 #txt_materias p {
-    background-color: #d99379b0;
-    color: white;
+    background-color: #00171a;
+    color: #e3b862;
     padding: 20px 20px 20px 20px;
     border-radius: 8px;
-    box-shadow: 0px 5px 5px black;
+    box-shadow: 0px 10px 40px #0c0c0cbb;
 
 }
 
@@ -224,19 +223,94 @@ header a {
 
 
 .caixaExterna {
-    width: 1000px;
-    height: 1000px;
+    width: 100%;
+    height: 100%;
     background-color: #23232399;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin: 8% 25% 0 25%; 
-    padding: 40px; */
 }
 
-#areaFormulario {
+.areaFormulario {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.areaFormulario h1 {
+    color: #F29F05;
+    
+}
+
+.cardLogin {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: #012326;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #000000bb;
 
 }
 
-#areaLogin {
+.cardLogin h1 {
+    color: #F29F05;
+    font-weight: 800;
+    margin: 0;
+}
+
+.areaImagem {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px;
+}
+
+.textfield input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #01464d93;
+    font-size: 18px;
+    box-shadow: 0px 10px 40px #161616bb;
+    box-sizing: border-box;
+}
+
+.textfield label {
+    color: #F29F05;
+    margin-bottom: 10px;
+}
+
+.botaoAcesso {
+    width: 50%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+    color: #00171a;
+    background-color: #013d42;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px #161616bb;
+
+}
+
+#imgLogin {
+    width: 45%;
 }

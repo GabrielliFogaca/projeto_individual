@@ -13,24 +13,61 @@
         <img src="assets/img/logo.png" alt="" width="150px" />
       </h1>
       <ul class="navbar">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Matérias</a></li>
-        <li><a href="#">Matrícula</a></li>
-        <button id="entrar">Login</li>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="#txt_sobre">Sobre</a></li>
+        <li><a href="#txt_materias">Matérias</a></li>
+        <li><a href="/cadastro.html">Matrícula</a></li>
+        <li><a href="/login.html">Login</a></li>
         </button>
       </ul>
-    </div>
+        </div>
   </header>
 <body>
 
     <div class="caixaExterna">
         <div class="areaFormulario">
-          <h1>Faça sua matricula<br> E viva com magia.</h1>
+          <h1>Bem vindo,<br> Se inscreva e viva de magia.</h1>
+          <img src="assets/img/varinha_login.png" id="imgLogin" alt="">
         </div>
 
         <div class="areaImagem">
+            <div class="cardLogin">
+                <h1>LOGIN</h1>
+                <div class="textfield">
+                    <label for="usuario">Nome do Aluno</label>
+                    <input type="text" id="user" placeholder="Nome completo"><br>
+                </div>
+                <div class="textfield">
+                    <label for="usuario">Data de Nascimento</label>
+                    <input type="date" id="dtNasc" placeholder="Data de nascimento"><br>
 
+                </div>
+                <div class="textfield">
+                  <label for="usuario">Qual sua origem</label>
+                  <select id="origemCheck">
+                    <option value="1">Bruxa</option>
+                    <option value="2">Trouxa</option>
+                    <option value="3">Mista</option>
+                </select>
+                              </div>
+
+              <div class="textfield">
+                <label for="usuario">Casa de Preferencia</label>
+                <select id="casaCheck">
+                  <option value="1">Grifinória</option>
+                  <option value="2">Lufa-Lufa</option>
+                  <option value="3">Corvinal</option>
+                  <option value="3">Sonserina</option>
+              </select>
+                          </div>
+            <div class="textfield">
+              <label for="usuario">Senha</label>
+              <input type="password" id="senha" placeholder="Senha"><br>
+          </div>
+
+                <button class="botaoAcesso">ENTRAR</button>
+
+            </div>
         </div>
     </div>
     
