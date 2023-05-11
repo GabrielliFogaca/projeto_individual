@@ -221,21 +221,22 @@ header a {
     padding-bottom: 50px;
 }
 
+
+
 .caixaExterna {
-    background-color: #ffffff85;
-    width: 50%;
+    width: 1000px;
+    height: 1000px;
+    background-color: #23232399;
     display: flex;
     justify-content: center;
-    justify-items: center;
-    margin: 8% 0 0 25%;    
+    align-items: center;
+    /* margin: 8% 25% 0 25%; 
+    padding: 40px; */
 }
 
 #areaFormulario {
-    display: inline-block;
-    justify-content: center;
+
 }
 
 #areaLogin {
-    display: inline-block;
-    justify-content: center;
 }
