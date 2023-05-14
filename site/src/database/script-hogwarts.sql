@@ -18,6 +18,7 @@ nome VARCHAR(20),
 sobrenome VARCHAR(20),
 nickname VARCHAR(20),
 dtNasc DATE,
+senha VARCHAR(13),
 fkOrigem INT,
 constraint fkO FOREIGN KEY (fkOrigem)
 	references origem(idOrigem),
@@ -43,3 +44,13 @@ INSERT INTO usuario VALUES
 (null, 'Luke', 'Grantte', 'GrantB', '2000-02-15', 2, 3),
 (null, 'Lauren', 'Darking', 'Dark Fonte', '1999-05-01', 3, 2),
 (null, 'Leily', 'Alves', 'LuxLei', '2001-12-09', 1, 1);
+
+
+SELECT * FROM usuario;
+select * from origem;
+
+SELECT COUNT(usuario.fkOrigem) as voto, origem.tipo AS origem 
+FROM usuario JOIN origem ON  origem.idOrigem = usuario.fkOrigem group by usuario.fkOrigem;
+
+SELECT COUNT(usuario.fkCasa) as casa, casa.nome AS Casa 
+FROM usuario JOIN casa ON  casa.idCasa = usuario.fkCasa group by usuario.fkCasa;
