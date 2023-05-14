@@ -199,7 +199,32 @@ header a {
     grid-row-end: 9;
 }
 
+.botaoChapeu {
+    width: 100%;
+    padding: 25px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+    color: #00171a;
+    background-color: #e3b862;
+    cursor: pointer;
+    box-shadow: 5px 10px 50px #161616bb;
 
+}
+
+.cardChapeu {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: #f29f052d;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #000000bb;
+
+}
 
 #container_rodape {
     background-color: #012326;
@@ -223,8 +248,6 @@ header a {
     font-size: 20px;
 
 }
-
-
 
 .caixaExterna {
     width: 100%;
