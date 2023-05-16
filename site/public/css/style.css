@@ -340,3 +340,95 @@ header a {
 #imgLogin {
     width: 45%;
 }
+
+.caixaExternaCadastro {
+    width: 98vw;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.areaFormularioCadastro {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.areaFormularioCadastro h1 {
+    color: #F29F05;
+    
+}
+
+.cardLoginCadastro {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: #012326;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #000000bb;
+
+}
+
+.cardLoginCadastro h1 {
+    color: #F29F05;
+    font-weight: 800;
+    margin: 0;
+}
+
+.areaImagemCadastro {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* .textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px;
+}
+
+.textfield input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #01464d93;
+    font-size: 18px;
+    box-shadow: 0px 10px 40px #161616bb;
+    box-sizing: border-box;
+}
+
+.textfield label {
+    color: #F29F05;
+    margin-bottom: 10px;
+}
+
+.botaoAcesso {
+    width: 50%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+    color: #00171a;
+    background-color: #013d42;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px #161616bb;
+
+}
+
+#imgLogin {
+    width: 45%;
+} */
