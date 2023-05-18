@@ -66,6 +66,7 @@ function cadastrar(req, res) {
     var senha = req.body.senhaServer;
     var origem = req.body.origemServer
     var casa = req.body.casaServer;
+    
 
     // Faça as validações dos valores
     if (nome == undefined) {

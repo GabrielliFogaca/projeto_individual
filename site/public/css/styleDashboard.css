@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: ABeeZee, 'Courier New', Courier, monospace;
+    background-image: url(../assets/img/background_sonserina.jpg) ;
+    background-size: cover;    
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+header {
+    background-color: #012326;
+    border-bottom: 3px #F29F05 solid;
+}
+
+header #entrar{
+    background-color: #F29F05;
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.subtitulo {
+    text-decoration: wavy;
+    font-size: 20px;
+}
+
+header .container {
+    justify-content: space-between;
+}
+
+header a {
+    text-decoration: none;
+    color: #e3b862;
+}
+
+.navbar {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.container_feiticos {
+    padding: 5% 13% 10% 13%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.manualFeiticos {
+    text-shadow: 1px 1px 2px #424242 ;
+    color: #1d6800;
+    background-color: #c0c0c0;
+    text-align: center;
+    padding: 3% 20% 3% 20%;
+    border-radius: 10%;
+}
+
+.cards_feiticos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.cards {
+    text-shadow: 1px 1px 2px #424242 ;
+    color: #1d6800;
+    background-color: #c0c0c0b7;
+    padding: 2%;
+    margin: 1.5vh;
+    text-align: center;
+    border-radius: 5%;
+}

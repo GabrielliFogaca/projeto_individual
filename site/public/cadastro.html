@@ -123,17 +123,17 @@
 
         if (nomeVar == "" || primeiroNomeVar == "" || sobrenomeVar == "" || dtNascimentoVar == "" || senhaVar == "" || origemVar == "" || casaVar == "") {
             //cardErro.style.display = "block"
-            swal("Ops", "Preencha todos os campos 😠", "error")
+            swal("Ops", "Algo está errado!", "error")
 
 
             finalizarAguardar();
             return false;
         }
         else if (nomeVar.length < 8) {
-            swal("Ops", "O nome inserido é muito curto. Por favor, insira um nome com pelo menos 8 caracteres 😠", "warning")
+            swal("Ops", "O nome inserido é pequeno demais. Por Dumbledore, insira um nome com no mínomo 8 digitos.", "warning")
         }
         else if (senhaVar.length < 8) {
-            swal("Ops", "A senha inserida é muito curta. Por favor,insira uma senha com pelo menos 8 caracteres 😠", "warning")
+            swal("Ops", "A senha inserida é pequena demais. Por Dumbledore, insira uma senha com no mínimo 8 digitos 😠", "warning")
         }
         else {
             setInterval('oi', 5000)
