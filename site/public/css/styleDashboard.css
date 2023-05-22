@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
 
-body {
+* {
     margin: 0;
     padding: 0;
+}
+
+body {
     font-family: ABeeZee, 'Courier New', Courier, monospace;
     background-image: url(../assets/img/background_sonserina.jpg) ;
     background-size: cover;    
+    height: 100vh;
+    width: 100%;
 }
+
 
 .container {
     width: 80%;
@@ -68,15 +74,87 @@ header a {
 .cards_feiticos {
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+}
+
+.cards_feiticos h3 {
+    padding: 20px;
+}
+
+main.cards_feiticos section.cards1 {
+    background-color: #b7e99f91;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px;
+    border-radius: 8px;
+    max-height: 500px;
+    max-width: 300px;
+    margin-left: 36px;
+    margin-bottom: 30px;
+
+}
+
+main.cards_feiticos section.cards2 {
+    background-color: #b7e99f91;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px;
+    border-radius: 8px;
+    max-height: 500px;
+    max-width: 300px;
+    margin-left: 36px;
+    margin-bottom: 30px;
+
+}
+
+main.cards_feiticos section.cards3 {
+    background-color: #b7e99f91;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px;
+    border-radius: 8px;
+    max-height: 500px;
+    max-width: 300px;
+    margin-left: 36px;
+    margin-bottom: 30px;
+
+}
+
+main.cards_feiticos section.cards4 {
+    background-color: #b7e99f91;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px;
+    border-radius: 8px;
+    max-height: 500px;
+    max-width: 300px;
+    margin-left: 26px;
+    margin-bottom: 30px;
+}
+
+main.cards_feiticos section.cards5 {
+    background-color: #b6e99f91;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px;
+    border-radius: 8px;
+    max-height: 500px;
+    max-width: 300px;
+    margin-left: 36px;
+    margin-bottom: 30px;
+
 }
 
 .cards {
-    text-shadow: 1px 1px 2px #424242 ;
+    /* text-shadow: 1px 1px 2px #424242 ;
     color: #1d6800;
     background-color: #c0c0c0b7;
     padding: 2%;
     margin: 1.5vh;
     text-align: center;
     border-radius: 5%;
-}
+} */
