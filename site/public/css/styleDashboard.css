@@ -13,7 +13,7 @@ body {
     width: 100%;
 }
 
-
+/* Organização, disposição e cores navbar */
 .container {
     width: 80%;
     margin: auto;
@@ -22,19 +22,17 @@ body {
 
 header {
     background-color: #012326;
-    border-bottom: 3px #F29F05 solid;
+    border-bottom: 3px #c0c0c0 solid;
 }
 
-header #entrar{
-    background-color: #F29F05;
-    color: #000;
-    padding: 10px;
-    border-radius: 10px;
-}
 
 .subtitulo {
     text-decoration: wavy;
     font-size: 20px;
+}
+
+.agora {
+    font-weight: 900;
 }
 
 header .container {
@@ -43,7 +41,7 @@ header .container {
 
 header a {
     text-decoration: none;
-    color: #e3b862;
+    color: #c0c0c0;
 }
 
 .navbar {
@@ -53,6 +51,35 @@ header a {
     justify-content: space-evenly;
     list-style: none;
 }
+
+.btn-logout {
+    margin: 0;
+    padding: 0;
+    background-color: #c0c0c0;
+    color: rgb(11, 114, 2);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+
+  .hello {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  
+  .hello h3 {
+    color: #78e362;
+    font-weight: 300;
+    font-size: 25px;
+  }
+  
+  .hello h3 span {
+    font-weight: 800;
+  }
+  
 
 .container_feiticos {
     padding: 5% 13% 10% 13%;

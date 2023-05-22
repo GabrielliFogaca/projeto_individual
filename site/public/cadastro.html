@@ -19,7 +19,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="#txt_sobre">Sobre</a></li>
         <li><a href="#txt_materias">Matérias</a></li>
-        <li><a href="cadastro.html">Matrícula</a></li>
+        <li class="agora"><a href="cadastro.html">Matrícula</a></li>
         <li><a href="login.html">Login</a></li>
         </button>
       </ul>
@@ -112,16 +112,15 @@
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
-        var nomeVar = nickname_input.value;
         var primeiroNomeVar = user_input.value;
         var sobrenomeVar = sobrenome_input.value;
-        var dtNascimentoVar = dtNasc_input.value;
+        var nicknameVar = nickname_input.value;
         var senhaVar = senha_input.value;
         var origemVar = origemCheck.value;
         var casaVar = casaCheck.value;
 
 
-        if (nomeVar == "" || primeiroNomeVar == "" || sobrenomeVar == "" || dtNascimentoVar == "" || senhaVar == "" || origemVar == "" || casaVar == "") {
+        if (primeiroNomeVar == "" || sobrenomeVar == "" || nicknameVar == "" || senhaVar == "" || origemVar == "" || casaVar == "") {
             //cardErro.style.display = "block"
             swal("Ops", "Algo está errado!", "error")
 
@@ -129,11 +128,11 @@
             finalizarAguardar();
             return false;
         }
-        else if (nomeVar.length < 8) {
-            swal("Ops", "O nome inserido é pequeno demais. Por Dumbledore, insira um nome com no mínomo 8 digitos.", "warning")
+        else if (primeiroNomeVar.length < 3) {
+            swal("Ops", "O nome inserido é pequeno demais. Por Dumbledore, insira um nome com no mínomo 3 digitos 😠", "warning")
         }
-        else if (senhaVar.length < 8) {
-            swal("Ops", "A senha inserida é pequena demais. Por Dumbledore, insira uma senha com no mínimo 8 digitos 😠", "warning")
+        else if (senhaVar.length < 3) {
+            swal("Ops", "A senha inserida é pequena demais. Por Harry Potter, insira uma senha com no mínimo 3 digitos 😠", "warning")
         }
         else {
             setInterval('oi', 5000)
@@ -151,7 +150,9 @@
                 body: JSON.stringify({
                     // crie um atributo que recebe o valor recuperado aqui
                     // Agora vá para o arquivo routes/usuario.js
-                    nomeServer: nomeVar,
+                    primeiroNomeServer: primeiroNomeVar,
+                    sobrenomeServer: sobrenomeVar,
+                    nicknameServer: nicknameVar,
                     senhaServer: senhaVar,
                     origemServer: origemVar,
                     casaServer: casaVar
@@ -163,7 +164,7 @@
 
                 if (resposta.ok) {
                     //cardErro.style.display = "block";
-                    swal("Parábens", "Cadastro realizado com sucesso redirecionando a tela de login 😄...!", "success");
+                    swal("Parábens", "Matrícula realizado com sucesso redirecionando a tela de login 😄...!", "success");
 
 
                     setTimeout(() => {

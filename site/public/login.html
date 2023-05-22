@@ -19,7 +19,7 @@
         <li><a href="#txt_sobre">Sobre</a></li>
         <li><a href="#txt_materias">Matérias</a></li>
         <li><a href="cadastro.html">Matrícula</a></li>
-        <li><a href="login.html">Login</a></li>
+        <li class="agora"><a href="login.html">Login</a></li>
         </button>
       </ul>
         </div>
@@ -36,7 +36,7 @@
             <div class="cardLogin">
                 <h1>Área de LOGIN</h1>
                 <div class="textfield">
-                    <input type="text" id="login_input" placeholder="Usuário"><br>
+                    <input type="text" id="login_input" placeholder="Nickname"><br>
                 </div>
                 <div class="textfield">
                     <input type="password" id="senha_input" placeholder="Senha"><br>
@@ -72,21 +72,21 @@
   function entrar() {
 
 
-      var nomeVar = login_input.value;
+    var nicknameVar = login_input.value;
       var senhaVar = senha_input.value;
 
-      if (nomeVar == "" || senhaVar == "") {
+      if (nicknameVar == "" || senhaVar == "") {
           // cardErro.style.display = "block"
           swal("Ops", "Preencha os campos para logar 😠!", "error")
           finalizarAguardar();
           return false;
       }
       else {
-          swal("Parábens", "Login realizado com sucesso redirecionando a tela do quiz 😄se divirta...!", "success");
+          swal("Parábens", "Login realizado com sucesso, redirecionando a tela do aluno! ♥", "success");
           setInterval('...', 2000)
 
 
-          console.log("FORM LOGIN: ", nomeVar);
+          console.log("FORM LOGIN: ", nicknameVar);
           console.log("FORM SENHA: ", senhaVar);
 
           fetch("/usuarios/autenticar", {
@@ -95,7 +95,7 @@
                   "Content-Type": "application/json"
               },
               body: JSON.stringify({
-                nomeServer: nomeVar,
+                nicknameServer: nicknameVar,
                   senhaServer: senhaVar
               })
           }).then(function (resposta) {
@@ -113,7 +113,7 @@
                       sessionStorage.ID_USUARIO = json.idUsuario;
 
                       setTimeout(function () {
-                          window.location = "index.html";
+                          window.location = "dashboard/sonserina/salaComunal.html";
                       }, 3000); // apenas para exibir o loading
 
                   });

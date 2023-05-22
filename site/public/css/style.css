@@ -19,12 +19,6 @@ header {
     border-bottom: 3px #F29F05 solid;
 }
 
-header #entrar{
-    background-color: #F29F05;
-    color: #000;
-    padding: 10px;
-    border-radius: 10px;
-}
 
 .subtitulo {
     text-decoration: wavy;
@@ -46,6 +40,21 @@ header a {
     align-items: center;
     justify-content: space-evenly;
     list-style: none;
+}
+
+.btn-logout {
+    margin: 0;
+    padding: 0;
+    background-color: #035e00;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+
+.agora {
+    font-weight: 900;
 }
 
 

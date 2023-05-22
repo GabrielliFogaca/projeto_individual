@@ -14,7 +14,7 @@ nome VARCHAR(20)
 
 create table usuario (
 idUsuario INT PRIMARY KEY auto_increment,
-nome VARCHAR(20),
+primeiroNome VARCHAR(20),
 sobrenome VARCHAR(20),
 nickname VARCHAR(20),
 dtNasc DATE,
@@ -49,7 +49,7 @@ INSERT INTO usuario VALUES
 SELECT * FROM usuario;
 select * from origem;
 
-SELECT COUNT(usuario.fkOrigem) as voto, origem.tipo AS origem 
+SELECT COUNT(usuario.fkOrigem) as Qtd, origem.tipo AS origem 
 FROM usuario JOIN origem ON  origem.idOrigem = usuario.fkOrigem group by usuario.fkOrigem;
 
 SELECT COUNT(usuario.fkCasa) as casa, casa.nome AS Casa 
