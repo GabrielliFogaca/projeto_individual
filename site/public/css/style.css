@@ -7,27 +7,16 @@ body {
     background-image: url(../assets/img/background_home.jpg) ;
 }
 
-
-.container {
-    width: 80%;
-    margin: auto;
-    display: flex;
+/* Itens do navbar */
+header .container {
+    justify-content: space-between;
 }
+
 
 header {
     background-color: #012326;
     border-bottom: 3px #F29F05 solid;
-}
-
-
-.subtitulo {
-    text-decoration: wavy;
-    font-size: 20px;
-}
-
-header .container {
-    justify-content: space-between;
-}
+}    
 
 header a {
     text-decoration: none;
@@ -57,6 +46,13 @@ header a {
     font-weight: 900;
 }
 
+/* Banner e button */
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}    
 
 .banner {
     height: fit-content;
@@ -81,32 +77,23 @@ header a {
 
 }
 
-
-.banner .container #botao {
-    display: inline-block;
-    position: relative;
-    right: 30%;
-    top: 15%;
-}
-
 #botao1 {
     padding: 19px;
     color: #012326;
     background-color: #F29F05;
-    border-bottom: 5px #000 solid;
+    border-radius: 19px;
+    
 }
 
-#txt_sobre {
-    background-color: #00171a;
-    color: #e3b862;
-    margin: 0 100px 0 100px;
-    text-align: center;
-    border-radius: 8px;
-    padding: 10px 10px 10px 10px;
-    box-shadow: 0px 10px 40px #0c0c0cbb;
+.banner .container #botao {
+    display: inline-block;
+    position: relative;
+        right: 30%;
+        top: 15%;
+    }
 
 
-}
+/* Cards quem somos, grade e materias */
 
 #txt_materias {
     color: #e3b862;
@@ -114,9 +101,8 @@ header a {
     text-align: center;
     padding: 100px 100px 100px 100px;
     border-radius: 8px;
-
+    
 }
-
 #txt_materias h1 {
     background-color: #00171a;
     color: #e3b862;
@@ -127,6 +113,7 @@ header a {
     box-shadow: 0px 10px 40px #0c0c0cbb;
 
 }
+
 
 #txt_materias p {
     background-color: #00171a;
@@ -143,18 +130,25 @@ header a {
     gap: 3rem;
 }
 
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 5vw);
-    grid-gap: 5px;
+.subtitulo {
+    text-decoration: wavy;
+    font-size: 20px;
+}    
+
+#txt_sobre {
+    background-color: #00171a;
+    color: #e3b862;
+    margin: 0 100px 0 100px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 0px 10px 40px #0c0c0cbb;
+
+
 }
 
-.img_galeria {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+/* Galeria de fotos */
+
 
 #titulo {
     display: flex;
@@ -166,6 +160,18 @@ header a {
     justify-content: center;
 }
 
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 5px;
+}    
+
+.img_galeria {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}    
 /* Os itens abaixo definem (grid column é onde a imagem inicia, o end é onde termina (de largura) o row start é a linha onde está e o woe end é onde termina de comprimento.) */
 
 .galeria_item--1 {
@@ -209,6 +215,8 @@ header a {
     grid-row-end: 9;
 }
 
+/* Area onde leva para o quiz */
+
 .botaoChapeu {
     width: 100%;
     padding: 25px 0px;
@@ -233,29 +241,6 @@ header a {
     background-color: #f29f052d;
     border-radius: 20px;
     box-shadow: 0px 10px 40px #000000bb;
-
-}
-
-#container_rodape {
-    background-color: #012326;
-    color: black;
-    border-top: 3px #F29F05 solid;
-    margin-top: 100px;
-}
-
-#logo_rodape {
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-}  
-
-#informacoes_rodape span {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 50px;
-    color: #F29F05;
-    font-weight: 900;
-    font-size: 20px;
 
 }
 
@@ -308,6 +293,39 @@ header a {
 
 }
 
+
+/* Conteúdos do footer */
+
+#container_rodape {
+    background-color: #012326;
+    color: black;
+    border-top: 3px #F29F05 solid;
+    margin-top: 100px;
+}
+
+#logo_rodape {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}  
+
+#informacoes_rodape span {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    color: #F29F05;
+    font-weight: 900;
+    font-size: 20px;
+
+}
+
+/* FINAL DA PARTE INDEX INDEX */
+
+/* INÍCIO DA PÁGINAS DE FORMULARIO (LOGIN/CADASTRO) */
+#imgLogin {
+    width: 45%;
+}
+
 .textfield {
     width: 100%;
     display: flex;
@@ -337,6 +355,7 @@ header a {
     width: 50%;
     padding: 16px 0px;
     margin: 25px;
+    margin-left: 25%;
     border: none;
     border-radius: 10px;
     font-weight: 800;
@@ -344,16 +363,13 @@ header a {
     background-color: #013d42;
     cursor: pointer;
     box-shadow: 0px 10px 40px #161616bb;
-
+    justify-content: center;
 }
 
-#imgLogin {
-    width: 45%;
-}
 
 .caixaExternaCadastro {
-    width: 98vw;
-    height: 60%;
+    width: 90%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -390,12 +406,12 @@ header a {
 }
 
 .areaImagemCadastro {
-    width: 50vw;
-    height: 100vh;
+    width: 60%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    padding-top: 30px;
 }
 
 .container_quiz {
@@ -405,6 +421,8 @@ header a {
     justify-content: center;
     align-items: center;
 }
+
+/* Área quiz */
 
 #descricao {
     text-shadow: 5px 1px 5px #232323 ;

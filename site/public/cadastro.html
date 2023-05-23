@@ -1,191 +1,200 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
-    <title>Inscreva-se !</title>
+  <title>Inscreva-se !</title>
 </head>
 <header>
-    <div class="container">
-      <h1 class="logo">
-        <a href="index.html"><img src="assets/img/logo.png" alt="" width="150px" /></a>
-      </h1>
-      <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#txt_sobre">Sobre</a></li>
-        <li><a href="#txt_materias">Matérias</a></li>
-        <li class="agora"><a href="cadastro.html">Matrícula</a></li>
-        <li><a href="login.html">Login</a></li>
-        </button>
-      </ul>
-        </div>
-  </header>
+  <div class="container">
+    <h1 class="logo">
+      <a href="index.html"><img src="assets/img/logo.png" alt="" width="150px" /></a>
+    </h1>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#txt_sobre">Sobre</a></li>
+      <li><a href="#txt_materias">Matérias</a></li>
+      <li class="agora"><a href="cadastro.html">Matrícula</a></li>
+      <li><a href="login.html">Login</a></li>
+      </button>
+    </ul>
+  </div>
+</header>
+
 <body>
 
-    <div class="caixaExternaCadastro">
-        <div class="areaFormularioCadastro">
-          <h1>Bem vindo,<br> Se inscreva e viva de magia.</h1>
-          <h4>Se increva apenas após realizar o teste de casas. <br>
-          Caso ainda não tenha realizado, realize agora, clicando aqui. </h4>
-          <img src="assets/img/pena_cadastro.png" id="imgLogin" alt="">
-        </div>
 
-        <div class="areaImagemCadastro">
-            <div class="cardLoginCadastro">
-                <h1>MATRICULE-SE</h1>
-                <div class="textfield">
-                    <label for="usuario">Primeiro nome</label>
-                    <input type="text" id="user_input" placeholder="Primeiro nome"><br>
-                </div>
-                <div class="textfield">
-                  <label for="usuario">Sobrenome</label>
-                  <input type="text" id="sobrenome_input" placeholder="Último Sobrenome"><br>
-              </div>
-
-                <div class="textfield">
-                  <label for="usuario">Nickname</label>
-                  <input type="text" id="nickname_input" placeholder="Mostre como gostaria de ser chamado"><br>
-              </div>
-
-                <div class="textfield">
-                    <label for="usuario">Data de Nascimento</label>
-                    <input type="date" id="dtNasc_input" placeholder="Data de nascimento"><br>
-
-                </div>
-                <div class="textfield">
-                  <label for="usuario">Qual sua origem</label>
-                  <select id="origemCheck">
-                    <option value="1">Bruxa</option>
-                    <option value="2">Trouxa</option>
-                    <option value="3">Mista</option>
-                </select>
-                              </div>
-
-              <div class="textfield">
-                <label for="usuario">Casa pertencente. </label>
-                <select id="casaCheck">
-                  <option value="1">Grifinória</option>
-                  <option value="2">Lufa-Lufa</option>
-                  <option value="3">Corvinal</option>
-                  <option value="3">Sonserina</option>
-              </select>
-                          </div>
-</div>
-                          
-            <div class="textfield">
-              <label for="usuario">Senha</label>
-              <input type="password" id="senha_input" placeholder="Senha"><br>
-          </div>
-
-                <button onclick="cadastrar()" class="botaoAcesso">MATRICULAR</button>
-
-            </div>
-        </div>
+  <div class="caixaExternaCadastro">
+    <div class="areaFormularioCadastro">
+      <h1>Bem vindo,<br> Se inscreva e viva de magia.</h1>
+      <h4>Se increva apenas após realizar o teste de casas. <br>
+        Caso ainda não tenha realizado, realize agora, clicando aqui. </h4>
+      <img src="assets/img/pena_cadastro.png" id="imgLogin" alt="">
     </div>
-    
+
+    <div class="areaImagemCadastro">
+      <div class="cardLoginCadastro">
+        <h1>MATRICULE-SE</h1>
+        <div class="textfield">
+          <label for="usuario">Primeiro nome</label>
+          <input type="text" id="user_input" placeholder="Primeiro nome"><br>
+        </div>
+        <div class="textfield">
+          <label for="usuario">Sobrenome</label>
+          <input type="text" id="sobrenome_input" placeholder="Último Sobrenome"><br>
+        </div>
+
+        <div class="textfield">
+          <label for="usuario">Nickname</label>
+          <input type="text" id="nickname_input" placeholder="Mostre como gostaria de ser chamado"><br>
+        </div>
+
+        <div class="textfield">
+          <label for="usuario">Qual sua origem</label>
+          <select id="origemCheck">
+            <option value="1">Bruxa</option>
+            <option value="2">Trouxa</option>
+            <option value="3">Mista</option>
+          </select>
+        </div>
+
+        <div class="textfield">
+          <label for="usuario">Casa pertencente. </label>
+          <select id="casaCheck">
+            <option value="1">Grifinória</option>
+            <option value="2">Lufa-Lufa</option>
+            <option value="3">Corvinal</option>
+            <option value="3">Sonserina</option>
+          </select>
+        </div>
+        <div class="textfield">
+          <label for="usuario">Senha</label>
+          <input type="password" id="senha_input" placeholder="Senha"><br>
+        </div>
+  
+        <div class="textfield">
+          <label for="usuario">Qual série será cursada </label>
+          <select id="anoEstudo">
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+  
+        <button onclick="cadastrar()" class="botaoAcesso">MATRICULAR</button>
+        
+      </div>
+
+
+
+    </div></div>
+    </div>
+  </div>
+  </div>
+
 </body>
 <footer>
 
   <div id="container_rodape">
 
-  <div id="logo_rodape">
+    <div id="logo_rodape">
 
-    <img src="/site/public/assets/img/logo.png" alt="Logo rodapé" width="150px">
+      <img src="/site/public/assets/img/logo.png" alt="Logo rodapé" width="150px">
 
+    </div>
+
+    <div id="informacoes_rodape">
+
+      <span>VIVA A MAGIA ♥ </span>
+
+    </div>
   </div>
-
-  <div id="informacoes_rodape">
-
-    <span>VIVA A MAGIA ♥ </span>
-
-  </div>
-</div>
 </footer>
 
 </html>
 <script>
   function cadastrar() {
-        //aguardar();
+    //aguardar();
 
-        //Recupere o valor da nova input pelo nome do id
-        // Agora vá para o método fetch logo abaixo
-        var primeiroNomeVar = user_input.value;
-        var sobrenomeVar = sobrenome_input.value;
-        var nicknameVar = nickname_input.value;
-        var senhaVar = senha_input.value;
-        var origemVar = origemCheck.value;
-        var casaVar = casaCheck.value;
-
-
-        if (primeiroNomeVar == "" || sobrenomeVar == "" || nicknameVar == "" || senhaVar == "" || origemVar == "" || casaVar == "") {
-            //cardErro.style.display = "block"
-            swal("Ops", "Algo está errado!", "error")
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var primeiroNomeVar = user_input.value;
+    var sobrenomeVar = sobrenome_input.value;
+    var nicknameVar = nickname_input.value;
+    var senhaVar = senha_input.value;
+    var origemVar = origemCheck.value;
+    var casaVar = casaCheck.value;
 
 
-            finalizarAguardar();
-            return false;
-        }
-        else if (primeiroNomeVar.length < 3) {
-            swal("Ops", "O nome inserido é pequeno demais. Por Dumbledore, insira um nome com no mínomo 3 digitos 😠", "warning")
-        }
-        else if (senhaVar.length < 3) {
-            swal("Ops", "A senha inserida é pequena demais. Por Harry Potter, insira uma senha com no mínimo 3 digitos 😠", "warning")
-        }
-        else {
-            setInterval('oi', 5000)
+    if (primeiroNomeVar == "" || sobrenomeVar == "" || nicknameVar == "" || senhaVar == "" || origemVar == "" || casaVar == "") {
+      //cardErro.style.display = "block"
+      swal("Ops", "Algo está errado!", "error")
 
 
-
-
-
-            // Enviando o valor da nova input
-            fetch("/usuarios/cadastrar", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    // crie um atributo que recebe o valor recuperado aqui
-                    // Agora vá para o arquivo routes/usuario.js
-                    primeiroNomeServer: primeiroNomeVar,
-                    sobrenomeServer: sobrenomeVar,
-                    nicknameServer: nicknameVar,
-                    senhaServer: senhaVar,
-                    origemServer: origemVar,
-                    casaServer: casaVar
-
-                })
-            }).then(function (resposta) {
-
-                console.log("resposta: ", resposta);
-
-                if (resposta.ok) {
-                    //cardErro.style.display = "block";
-                    swal("Parábens", "Matrícula realizado com sucesso redirecionando a tela de login 😄...!", "success");
-
-
-                    setTimeout(() => {
-                        window.location = "login.html";
-                    }, 3000)
-
-                    limparFormulario();
-                    finalizarAguardar();
-                } else {
-                    swal("Ops", "Mais de um usuário com o mesmo login e senha 😭!")
-                }
-            }).catch(function (resposta) {
-                console.log(`#ERRO: ${resposta}`);
-                finalizarAguardar();
-            });
-
-            return false;
-        }
+      finalizarAguardar();
+      return false;
     }
+    else if (primeiroNomeVar.length < 3) {
+      swal("Ops", "O nome inserido é pequeno demais. Por Dumbledore, insira um nome com no mínomo 3 digitos 😠", "warning")
+    }
+    else if (senhaVar.length < 3) {
+      swal("Ops", "A senha inserida é pequena demais. Por Harry Potter, insira uma senha com no mínimo 3 digitos 😠", "warning")
+    }
+    else {
+      setInterval('oi', 5000)
+
+
+
+
+
+      // Enviando o valor da nova input
+      fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          // crie um atributo que recebe o valor recuperado aqui
+          // Agora vá para o arquivo routes/usuario.js
+          primeiroNomeServer: primeiroNomeVar,
+          sobrenomeServer: sobrenomeVar,
+          nicknameServer: nicknameVar,
+          senhaServer: senhaVar,
+          origemServer: origemVar,
+          casaServer: casaVar
+
+        })
+      }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          //cardErro.style.display = "block";
+          swal("Parábens", "Matrícula realizado com sucesso redirecionando a tela de login 😄...!", "success");
+
+
+          setTimeout(() => {
+            window.location = "login.html";
+          }, 3000)
+
+          limparFormulario();
+          finalizarAguardar();
+        } else {
+          swal("Ops", "Mais de um usuário com o mesmo login e senha 😭!")
+        }
+      }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+      });
+
+      return false;
+    }
+  }
 
     //function sumirMensagem() {
         //cardErro.style.display = "none"

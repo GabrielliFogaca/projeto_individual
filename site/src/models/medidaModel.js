@@ -5,11 +5,11 @@ function buscarUltimasMedidas(idAquario, limite_linhas) {
     instrucaoSql = ''
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
-        instrucaoSql = `SELECT COUNT(usuario.fkOrigem) as voto, origem.tipo AS origem 
+        instrucaoSql = `SELECT COUNT(usuario.fkOrigem) as Qtd, origem.tipo AS origem 
         FROM usuario JOIN origem ON  origem.idOrigem = usuario.fkOrigem group by usuario.fkOrigem;
         `;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `SELECT COUNT(usuario.fkOrigem) as voto, origem.tipo AS origem 
+        instrucaoSql = `SELECT COUNT(usuario.fkOrigem) as Qtd, origem.tipo AS origem 
         FROM usuario JOIN origem ON  origem.idOrigem = usuario.fkOrigem group by usuario.fkOrigem;
         `;
     } else {
