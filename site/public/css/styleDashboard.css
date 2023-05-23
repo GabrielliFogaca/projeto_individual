@@ -180,5 +180,13 @@ main.cards_feiticos section.cards5 {
 }
 
 #content {
-    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.slides-list {
+    background-color: #c0c0c0;
+
 }
