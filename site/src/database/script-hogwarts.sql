@@ -1,3 +1,4 @@
+
 create database hogwarts;
 
 use hogwarts;
@@ -12,19 +13,26 @@ idCasa INT PRIMARY KEY auto_increment,
 nome VARCHAR(20)
 );
 
+create table anoEstudo (
+idAno INT PRIMARY KEY auto_increment,
+ano VARCHAR(20)
+);
+
 create table usuario (
 idUsuario INT PRIMARY KEY auto_increment,
 primeiroNome VARCHAR(20),
 sobrenome VARCHAR(20),
 nickname VARCHAR(20),
-dtNasc DATE,
 senha VARCHAR(13),
 fkOrigem INT,
 constraint fkO FOREIGN KEY (fkOrigem)
 	references origem(idOrigem),
 fkCasa INT,
 constraint fkC FOREIGN KEY (fkCasa)
-	references casa(idCasa)
+	references casa(idCasa),
+fkAno INT,
+constraint fkAno foreign key (fkAno)
+	references anoEstudo(idAno)
     );
 
 
@@ -39,15 +47,20 @@ INSERT INTO casa VALUES
 (null, 'Corvinal'),
 (null, 'Sonserina');
 
-INSERT INTO usuario VALUES 
-(null, 'Joana', 'Ferreira', 'Bruxoana', '1995-12-29', 1, 4),
-(null, 'Luke', 'Grantte', 'GrantB', '2000-02-15', 2, 3),
-(null, 'Lauren', 'Darking', 'Dark Fonte', '1999-05-01', 3, 2),
-(null, 'Leily', 'Alves', 'LuxLei', '2001-12-09', 1, 1);
+INSERT INTO anoEstudo VALUES 
+(null, 1),
+(null, 2);
 
+
+INSERT INTO usuario VALUES 
+(null, 'Joana', 'Ferreira', 'Bruxoana','12345678', 1, 4, 1),
+(null, 'Luke', 'Grantte', 'GrantB', '12345678', 2, 3, 1),
+(null, 'Lauren', 'Darking', 'Dark Fonte', '12345678', 3, 2, 1),
+(null, 'Leily', 'Alves', 'LuxLei', '12345678', 1, 1, 2);
 
 SELECT * FROM usuario;
 select * from origem;
+select * from casa;
 
 SELECT COUNT(usuario.fkOrigem) as Qtd, origem.tipo AS origem 
 FROM usuario JOIN origem ON  origem.idOrigem = usuario.fkOrigem group by usuario.fkOrigem;
