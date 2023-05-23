@@ -37,7 +37,7 @@
 
 <body>
     <div class="hello">
-        <h3>Saudações, <span id="b_usuario">usuário</span>, da casa <span id="b_casa">casa</span>!</h3>
+        <h3>Saudações, <span id="b_usuario">usuário</span>, da casa <span id="b_casa">SONSERINA</span>!</h3>
     </div>
 
     <div id="content">
@@ -49,7 +49,7 @@
                     </li>
                 </ul>
         </div>
-    
+
     
     </body>
     
@@ -60,7 +60,6 @@
 
 
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-
 
 
     let proximaAtualizacao;
@@ -121,7 +120,7 @@
             dados.labels.push(registro.origem);
             dados.datasets[0].data.push(registro.origem);
             dados.datasets[1].data.push(registro.Qtd);
-            console.log(registro.Qtd)
+            console.log(registro.Qtd)   
 
 
         }
@@ -146,7 +145,7 @@
                         type: 'linear',
                         display: true,
                         position: 'left',
-                        id: 'y-totalpersonagens',
+                        id: 'y-totalorigem',
                         ticks: {
                             beginAtZero: true,
                             max: 15,

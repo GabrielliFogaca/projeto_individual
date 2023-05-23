@@ -7,8 +7,8 @@
 
 body {
     font-family: ABeeZee, 'Courier New', Courier, monospace;
-    background-image: url(../assets/img/background_sonserina.jpg) ;
-    background-size: cover;    
+    background-image: url(../assets/img/background_sonserina.jpg);
+    background-size: cover;
     height: 100vh;
     width: 100%;
 }
@@ -25,11 +25,6 @@ header {
     border-bottom: 3px #c0c0c0 solid;
 }
 
-
-.subtitulo {
-    text-decoration: wavy;
-    font-size: 20px;
-}
 
 .agora {
     font-weight: 900;
@@ -61,25 +56,33 @@ header a {
     text-align: center;
     padding: 10px 15px;
     cursor: pointer;
-  }
+}
 
-  .hello {
+/* Mensagem de saudação ao usuário */
+.hello {
     width: 100%;
     display: flex;
     justify-content: center;
     padding-top: 20px;
-  }
-  
-  .hello h3 {
+}
+
+.hello h3 {
     color: #78e362;
     font-weight: 300;
     font-size: 25px;
-  }
-  
-  .hello h3 span {
+}
+
+.hello h3 span {
     font-weight: 800;
-  }
-  
+}
+
+/* Página de feitiços */
+
+.subtitulo {
+    text-decoration: wavy;
+    font-size: 20px;
+}
+
 
 .container_feiticos {
     padding: 5% 13% 10% 13%;
@@ -90,7 +93,7 @@ header a {
 }
 
 .manualFeiticos {
-    text-shadow: 1px 1px 2px #424242 ;
+    text-shadow: 1px 1px 2px #424242;
     color: #1d6800;
     background-color: #c0c0c0;
     text-align: center;
@@ -176,12 +179,6 @@ main.cards_feiticos section.cards5 {
 
 }
 
-.cards {
-    /* text-shadow: 1px 1px 2px #424242 ;
-    color: #1d6800;
-    background-color: #c0c0c0b7;
-    padding: 2%;
-    margin: 1.5vh;
-    text-align: center;
-    border-radius: 5%;
-} */
+#content {
+    
+}
