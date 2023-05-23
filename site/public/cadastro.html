@@ -129,9 +129,10 @@
     var senhaVar = senha_input.value;
     var origemVar = origemCheck.value;
     var casaVar = casaCheck.value;
+    var anoEstudoVar = anoEstudo.value;
 
 
-    if (primeiroNomeVar == "" || sobrenomeVar == "" || nicknameVar == "" || senhaVar == "" || origemVar == "" || casaVar == "") {
+    if (primeiroNomeVar == "" || sobrenomeVar == "" || nicknameVar == "" || senhaVar == "" || origemVar == "" || casaVar == "" || anoEstudoVar == "") {
       //cardErro.style.display = "block"
       swal("Ops", "Algo está errado!", "error")
 
@@ -166,7 +167,8 @@
           nicknameServer: nicknameVar,
           senhaServer: senhaVar,
           origemServer: origemVar,
-          casaServer: casaVar
+          casaServer: casaVar,
+          anoEstudoServer: anoEstudoVar
 
         })
       }).then(function (resposta) {

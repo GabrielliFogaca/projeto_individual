@@ -7,6 +7,7 @@ function testar(req, res) {
     res.json("ESTAMOS FUNCIONANDO!");
 }
 
+
 function listar(req, res) {
     usuarioModel.listar()
         .then(function (resultado) {
@@ -69,6 +70,7 @@ function cadastrar(req, res) {
     var senha = req.body.senhaServer;
     var origem = req.body.origemServer;
     var casa = req.body.casaServer;
+    var anoEstudo = req.body.anoEstudoServer;
     
 
 
@@ -84,7 +86,7 @@ function cadastrar(req, res) {
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(primeiroNome, sobrenome, nickname, origem, senha, casa)
+        usuarioModel.cadastrar(primeiroNome, sobrenome, nickname, origem, senha, casa, anoEstudo)
             .then(
                 function (resultado) {
                     res.json(resultado);
