@@ -52,6 +52,19 @@
 
         </div>
 
+        <div id="content">
+            <div class="slide-show select-disable">
+                <h2>Curiosidades</h2>
+                <ul class="slides-list">
+                    <li class="slide">
+                        <canvas id="myChart2"></canvas>
+                    </li>
+                </ul>
+
+        </div>
+
+
+
     
     </body>
     
@@ -66,21 +79,26 @@
 
     let proximaAtualizacao;
 
-    window.onload = obterDadosGrafico(1);
+    window.onload = obterDadosGrafico();
+    
+    function obterDadosGraficos() {
+        obterDadosGrafico(1)
+        obterDadosGrafico(2)
+ }
 
 
-    function obterDadosGrafico(idAquario) {
+    function obterDadosGrafico(idOrigem) {
 
         if (proximaAtualizacao != undefined) {
             clearTimeout(proximaAtualizacao);
         }
 
 
-        fetch(`/medidas/ultimas/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+        fetch(`/medidas/ultimas/${idOrigem}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                    plotarGrafico(resposta, idAquario);
+                    plotarGrafico(resposta, idOrigem);
 
                 });
             } else {
@@ -95,7 +113,7 @@
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-    function plotarGrafico(resposta, idAquario) {
+    function plotarGrafico(resposta, idOrigem) {
         console.log('iniciando plotagem do gráfico...');
 
         var dados = {
@@ -108,7 +126,7 @@
                 },
                 {
                     yAxisID: 'y-totalorigem',
-                    label: 'Origem doo bruxos da escola',
+                    label: 'Origem dos bruxos da escola',
                     backgroundColor: ['#A65A49', '#96D9D9','#011F26'],
                     borderColor: '#000',
                     fill: true,
@@ -151,7 +169,7 @@
                         id: 'y-totalorigem',
                         ticks: {
                             beginAtZero: true,
-                            max: 15,
+                            max: 50,
                             min: 0
                         }
                     }, {
@@ -167,9 +185,9 @@
 
         //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
         //     Para ajustar o "select", ajuste o comando sql em src/models
-        function atualizarGrafico(idAquario, dados) {
+        function atualizarGrafico(idOrigem, dados) {
 
-            fetch(`/medidas/tempo-real/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            fetch(`/medidas/tempo-real/${idOrigem}`, { cache: 'no-store' }).then(function (response) {
                 if (response.ok) {
                     response.json().then(function (novoRegistro) {
 
@@ -192,12 +210,12 @@
                         window.myChart.update();
 
                         // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                        proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
+                        proximaAtualizacao = setTimeout(() => atualizarGrafico(idOrigem, dados), 2000);
                     });
                 } else {
                     console.error('Nenhum dado encontrado ou erro na API');
                     // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                    proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 200000);
+                    proximaAtualizacao = setTimeout(() => atualizarGrafico(idOrigem, dados), 200000);
                 }
             })
                 .catch(function (error) {
@@ -206,7 +224,146 @@
 
         }
 
+        // FINAL DO GRÁFICO 1
+
+        // INÍCIO DO GRAFICO 2
+
+        window.onload = obterDadosGrafico(2);
+
+
+function obterDadosGrafico2(idOrigem) {
+
+    if (proximaAtualizacao != undefined) {
+        clearTimeout(proximaAtualizacao);
+    }
+
+
+    fetch(`/medidas/ultimas/${idOrigem}`, { cache: 'no-store' }).then(function (response) {
+        if (response.ok) {
+            response.json().then(function (resposta) {
+                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                plotarGrafico(resposta, idOrigem);
+
+            });
+        } else {
+            console.error('Nenhum dado encontrado ou erro na API');
+        }
+    })
+        .catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
+}
+
+
+
+        function plotarGrafico2(resposta, idOrigem) {
+        console.log('iniciando plotagem do gráfico...');
+
+        var dados2 = {
+            labels: [],
+            datasets: [
+                {
+                    label: '',
+
+                    data: []
+                },
+                {
+                    yAxisID: 'y-totalcasas',
+                    label: 'Quantidade de bruxos nas casas',
+                    backgroundColor: ['#A65A49', '#96D9D9','#011F26'],
+                    borderColor: '#000',
+                    fill: true,
+                    data: []
+                }
+            ]
+        };
+      
+
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            dados.labels.push(registro.casa);
+            dados.datasets[0].data.push(registro.casa);
+            dados.datasets[1].data.push(registro.Qtd);
+            console.log(registro.Qtd)   
+
+
+        }
+
+        console.log(JSON.stringify(dados));
+
+        var ctx2 = myChart2.getContext('2d');
+        window.myChart2 = Chart.Bar(ctx2, {
+            data: dados,
+            options: {
+                responsive: true,
+                animation: { duration: 900 },
+                hoverMode: 'index',
+                stacked: false,
+                title: {
+                    display: true,
+                    text: 'Quantidade de bruxos nas casas'
+                },
+
+                scales: {
+                    yAxes: [{
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        id: 'y-totalcasa',
+                        ticks: {
+                            beginAtZero: true,
+                            max: 50,
+                            min: 0
+                        }
+                    }, {
+                        display: false,
+                    }],
+                }
+            }
+        });
+
+        
+    }
+
+    function atualizarGrafico2(idOrigem, dados) {
+
+fetch(`/medidas/tempo-real/${idOrigem}`, { cache: 'no-store' }).then(function (response) {
+    if (response.ok) {
+        response.json().then(function (novoRegistro2) {
+
+            console.log(`Dados recebidos Atualizar  Graficos: ${JSON.stringify(novoRegistro2)}`);
+            console.log(dados);
+
+            for (i = 0; i < novoRegistro2.length; i++) {
+                var registro2 = novoRegistro2[i];
+                // tirando e colocando valores no gráfico
+                dados.labels.shift(); // apagar o primeiro
+                dados.labels.push(registro2.casa);// incluir um novo momento
+
+                dados.datasets[0].data.shift();  // apagar o primeiro de umidade
+                dados.datasets[0].data.push(registro2.casa); // incluir uma nova medida de umidade
+
+                dados.datasets[1].data.shift();
+                dados.datasets[1].data.push(registro2.Qtd);
+            }
+
+            window.myChart2.update();
+
+            // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+            proximaAtualizacao = setTimeout(() => atualizarGrafico2(idOrigem, dados), 2000);
+        });
+    } else {
+        console.error('Nenhum dado encontrado ou erro na API');
+        // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+        proximaAtualizacao = setTimeout(() => atualizarGrafico2(idOrigem, dados), 200000);
+    }
+})
+    .catch(function (error) {
+        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+    });
+
+ }
     }
 
 // Criando estrutura para plotar gráfico - config
-</script> 
+</script>
