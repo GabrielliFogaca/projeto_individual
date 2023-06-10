@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: ABeeZee, 'Courier New', Courier, monospace;
+  background-image: url(../assets/img/background_home.jpg) ;
+}
+
+
+.container_quiz {
+  padding: 5% 13% 10% 13%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Área quiz -- Pagina inicial*/
+
+#descricao {
+  text-shadow: 5px 1px 5px #232323 ;
+  color: #F29F05;
+  background-color: #013d42;
+  text-align: center;
+  padding: 3% 20% 3% 20%;
+  border-radius: 10%;
+}
+
+.cards_quiz {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.cards {
+  color: #96773d;
+  background-color: #013d42;
+  padding: 2%;
+  margin: 1.5vh;
+  text-align: center;
+  border-radius: 5%;
+}
+
+.container_quiz #botaoQuiz {
+  padding: 2% 43% 2% 43%;
+  color: #ffa600;
+  background-color: #013d42;
+  border-bottom: 0%;
+  outline-style: none;
+}
+
+/* Perguntas do quiz */
+
+
+.container_quiz #botaoQuiz a {
+  text-decoration: none;
+  color: #F29F05;
+}
+
+#pergunta {
+  font-size: 30px;
+  color: #96773d;
+  background-color: #013d42;
+  padding: 2%;
+  margin: 1.5vh;
+  text-align: center;
+  border-radius: 5%;
+
+}
+
+#opcoes {
+  display: flex;
+  justify-content: space-evenly;  
+  align-items: center;
+  width: 100%;
+  padding-left: 0;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #96773d;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px; 
+  height: 150px;
+  margin-top: 20px;
+  background-color: #013d42;
+  cursor: pointer;
+  
+}
+
+
+#resultado {
+  font-size: 50px;
+  color: #96773d;
+  padding: 2%;
+  margin: 1.5vh;
+  text-align: center;
+  border-radius: 5%;
+
+}
