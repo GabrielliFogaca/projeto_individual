@@ -14,7 +14,7 @@ var perguntas = [
         opcoes: [   
         { texto: "Ocultismo", casa: "Sonserina" },
           { texto: "Trato das Criaturas Mágicas", casa: "Grifinória" },
-          { texto: "Inteligente", casa: "Corvinal" },
+          { texto: "Voo", casa: "Corvinal" },
           { texto: "Herbologia", casa: "Lufa-Lufa" }
         ]
       },
@@ -86,7 +86,7 @@ var perguntas = [
       opcoes: [
         { texto: "Covarde", casa: "Grifinória" },
         { texto: "Fraco(a)", casa: "Sonserina" },
-        { texto: "Estúoido", casa: "Corvinal" },
+        { texto: "Estúpido", casa: "Corvinal" },
         { texto: "Egoísta", casa: "Lufa-Lufa" }
       ]
     }
