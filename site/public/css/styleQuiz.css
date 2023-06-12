@@ -7,11 +7,22 @@ body {
 
 
 .container_quiz {
-  padding: 5% 13% 10% 13%;
+  padding: 5% 13% 5% 13%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  color: #F29F05;
+}
+
+#tituloQuiz {
+  color: #F29F05;
+  padding-left: 2%;
+}
+
+#tituloQuiz:hover {
+  color: #48f205;
+  padding-left: 2%;
 }
 
 /* Área quiz -- Pagina inicial*/

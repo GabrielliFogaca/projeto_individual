@@ -375,6 +375,11 @@ header a {
     align-items: center;
 }
 
+.areaFormularioCadastro a:hover {
+    background-color: #F29F05;
+    color: #00171a;
+}
+
 .areaFormularioCadastro {
     width: 50vw;
     height: 100vh;
@@ -382,11 +387,29 @@ header a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
+
+.areaFormularioCadastro a {
+    text-decoration: none;
+    color: #F29F05;
+
+}
+
 .areaFormularioCadastro h1 {
     color: #F29F05;
     
 }
+
+.areaFormularioCadastro h4 {
+    padding-top: 3%;
+    color: white;
+    width: 400px;
+    height: 100px;
+    background-color: #013d42;
+    border-radius: 20px;
+}
+    
 
 .cardLoginCadastro {
     width: 60%;
