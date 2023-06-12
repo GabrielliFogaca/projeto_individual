@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,14 +8,12 @@
     <title>Sala Comunal</title>
     <link rel="stylesheet" href="../../css/styleDashboard.css" />
 
- <!-- scripts do Chart.js - 2022-1 -->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="https://kit.fontawesome.com/3f0399636b.js" crossorigin="anonymous"></script>
-        <script src="../js/funcoes.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-        <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
-        <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
-      
+    <!-- scripts do Chart.js - 2022-1 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/3f0399636b.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+
 
 </head>
 <header>
@@ -36,19 +35,19 @@
     </div>
 </header>
 
-<body>
+<body onload="obterDadosGraficos()">
     <div class="hello">
         <h3>Saudações, <span id="b_usuario">usuário</span>, da casa <span id="b_casa">SONSERINA</span>!</h3>
     </div>
 
     <div id="content">
-            <div class="slide-show select-disable">
-                <h2>Curiosidades</h2>
-                <ul class="slides-list">
-                    <li class="slide">
-                        <canvas id="myChart"></canvas>
-                    </li>
-                </ul>
+        <div class="slide-show select-disable">
+            <h2>Curiosidades</h2>
+            <ul class="slides-list">
+                <li class="slide">
+                    <canvas id="myChart"></canvas>
+                </li>
+            </ul>
 
         </div>
 
@@ -56,18 +55,19 @@
             <div class="slide-show select-disable">
                 <h2>Curiosidades</h2>
                 <ul class="slides-list">
-                    <li class="slide">
+                    <li class="slide2">
                         <canvas id="myChart2"></canvas>
                     </li>
                 </ul>
 
-        </div>
+            </div>
 
 
 
-    
-    </body>
-    
+
+
+</body>
+
 </html>
 
 
@@ -79,12 +79,12 @@
 
     let proximaAtualizacao;
 
-    window.onload = obterDadosGrafico();
-    
+
+
     function obterDadosGraficos() {
-        obterDadosGrafico(1)
-        obterDadosGrafico(2)
- }
+        obterDadosGrafico(),
+        grafich2()
+    }
 
 
     function obterDadosGrafico(idOrigem) {
@@ -110,6 +110,77 @@
             });
     }
 
+    function grafich2() {
+
+fetch(`/medidas/ultimas2`, { cache: 'no-store' }).then(function (response) {
+    if (response.ok) {
+        response.json().then(function (resposta2) {
+            console.log(`Dados recebidos: ${JSON.stringify(resposta2)}`);
+            plotarGrafico2(resposta2);
+        
+
+        });
+    } else {
+        console.error('Nenhum dado encontrado ou erro na API');
+    }
+})
+    .catch(function (error) {
+        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+    });
+}
+function plotarGrafico2(resposta2) {
+
+console.log('iniciando plotagem do gráfico...');
+
+// Criando estrutura para plotar gráfico - labels
+let labels = [];
+
+// Criando estrutura para plotar gráfico - dados
+let dados = {
+    labels: labels,
+    datasets: [{
+        label: 'voto',
+        data: [],
+        fill: false,
+        backgroundColor: ['#A65A49', '#96D9D9', '#011F26','#ff4550'],
+        tension: 0.1
+    },
+    {
+        label: 'Temperatura',
+        data: [],
+        fill: false,
+        backgroundColor: ['#A65A49', '#96D9D9', '#011F26','#ff4550'],
+        tension: 0.1
+    }]
+};
+
+// Inserindo valores recebidos em estrutura para plotar o gráfico
+for (i = 0; i < resposta2.length; i++) {
+    var registro = resposta2[i];
+    labels.push(registro.Casa);
+    dados.datasets[0].data.push(registro.Qtd);
+   
+}
+
+
+// Criando estrutura para plotar gráfico - config
+const config = {
+    type: 'bar',
+    data: dados,
+};
+
+// Adicionando gráfico criado em div na tela
+let myChart = new Chart(
+    document.getElementById(`myChart2`),
+    config
+);
+
+
+}
+
+
+
+
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
@@ -127,21 +198,21 @@
                 {
                     yAxisID: 'y-totalorigem',
                     label: 'Origem dos bruxos da escola',
-                    backgroundColor: ['#A65A49', '#96D9D9','#011F26'],
+                    backgroundColor: ['#A65A49', '#96D9D9', '#011F26'],
                     borderColor: '#000',
                     fill: true,
                     data: []
                 }
             ]
         };
-      
+
 
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
             dados.labels.push(registro.origem);
             dados.datasets[0].data.push(registro.origem);
             dados.datasets[1].data.push(registro.Qtd);
-            console.log(registro.Qtd)   
+            console.log(registro.Qtd)
 
 
         }
@@ -224,146 +295,12 @@
 
         }
 
-        // FINAL DO GRÁFICO 1
-
-        // INÍCIO DO GRAFICO 2
-
-        window.onload = obterDadosGrafico(2);
 
 
-function obterDadosGrafico2(idOrigem) {
+        //  SEGUNDO GRAFICO
 
-    if (proximaAtualizacao != undefined) {
-        clearTimeout(proximaAtualizacao);
-    }
+  }
 
+   
 
-    fetch(`/medidas/ultimas/${idOrigem}`, { cache: 'no-store' }).then(function (response) {
-        if (response.ok) {
-            response.json().then(function (resposta) {
-                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                plotarGrafico(resposta, idOrigem);
-
-            });
-        } else {
-            console.error('Nenhum dado encontrado ou erro na API');
-        }
-    })
-        .catch(function (error) {
-            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-        });
-}
-
-
-
-        function plotarGrafico2(resposta, idOrigem) {
-        console.log('iniciando plotagem do gráfico...');
-
-        var dados2 = {
-            labels: [],
-            datasets: [
-                {
-                    label: '',
-
-                    data: []
-                },
-                {
-                    yAxisID: 'y-totalcasas',
-                    label: 'Quantidade de bruxos nas casas',
-                    backgroundColor: ['#A65A49', '#96D9D9','#011F26'],
-                    borderColor: '#000',
-                    fill: true,
-                    data: []
-                }
-            ]
-        };
-      
-
-        for (i = 0; i < resposta.length; i++) {
-            var registro = resposta[i];
-            dados.labels.push(registro.casa);
-            dados.datasets[0].data.push(registro.casa);
-            dados.datasets[1].data.push(registro.Qtd);
-            console.log(registro.Qtd)   
-
-
-        }
-
-        console.log(JSON.stringify(dados));
-
-        var ctx2 = myChart2.getContext('2d');
-        window.myChart2 = Chart.Bar(ctx2, {
-            data: dados,
-            options: {
-                responsive: true,
-                animation: { duration: 900 },
-                hoverMode: 'index',
-                stacked: false,
-                title: {
-                    display: true,
-                    text: 'Quantidade de bruxos nas casas'
-                },
-
-                scales: {
-                    yAxes: [{
-                        type: 'linear',
-                        display: true,
-                        position: 'left',
-                        id: 'y-totalcasa',
-                        ticks: {
-                            beginAtZero: true,
-                            max: 50,
-                            min: 0
-                        }
-                    }, {
-                        display: false,
-                    }],
-                }
-            }
-        });
-
-        
-    }
-
-    function atualizarGrafico2(idOrigem, dados) {
-
-fetch(`/medidas/tempo-real/${idOrigem}`, { cache: 'no-store' }).then(function (response) {
-    if (response.ok) {
-        response.json().then(function (novoRegistro2) {
-
-            console.log(`Dados recebidos Atualizar  Graficos: ${JSON.stringify(novoRegistro2)}`);
-            console.log(dados);
-
-            for (i = 0; i < novoRegistro2.length; i++) {
-                var registro2 = novoRegistro2[i];
-                // tirando e colocando valores no gráfico
-                dados.labels.shift(); // apagar o primeiro
-                dados.labels.push(registro2.casa);// incluir um novo momento
-
-                dados.datasets[0].data.shift();  // apagar o primeiro de umidade
-                dados.datasets[0].data.push(registro2.casa); // incluir uma nova medida de umidade
-
-                dados.datasets[1].data.shift();
-                dados.datasets[1].data.push(registro2.Qtd);
-            }
-
-            window.myChart2.update();
-
-            // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-            proximaAtualizacao = setTimeout(() => atualizarGrafico2(idOrigem, dados), 2000);
-        });
-    } else {
-        console.error('Nenhum dado encontrado ou erro na API');
-        // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-        proximaAtualizacao = setTimeout(() => atualizarGrafico2(idOrigem, dados), 200000);
-    }
-})
-    .catch(function (error) {
-        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-    });
-
- }
-    }
-
-// Criando estrutura para plotar gráfico - config
 </script>

@@ -190,3 +190,23 @@ main.cards_feiticos section.cards5 {
     background-color: #c0c0c0;
 
 }
+
+.slide-show h2{
+margin-top: -14px;
+}
+
+.slide{
+    width: 40vw;
+    height:47vh;
+}
+
+.slide2{
+    width: 40vw;
+    height:45vh;
+}
+
+
+.grafico{
+    width: 20vw;
+    height: 20vh;
+}

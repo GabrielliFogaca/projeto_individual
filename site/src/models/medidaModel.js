@@ -1,25 +1,6 @@
 var database = require("../database/config");
 
-function buscarUltimasMedidas(idOrigem, limite_linhas) {
 
-    instrucaoSql = ''
-
-    if (process.env.AMBIENTE_PROCESSO == "producao") {
-        instrucaoSql = `SELECT COUNT(usuario.fkOrigem) as Qtd, origem.tipo AS origem 
-        FROM usuario JOIN origem ON  origem.idOrigem = usuario.fkOrigem group by usuario.fkOrigem;
-        `;
-    } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `SELECT COUNT(usuario.fkOrigem) as Qtd, origem.tipo AS origem 
-        FROM usuario JOIN origem ON  origem.idOrigem = usuario.fkOrigem group by usuario.fkOrigem;
-        `;
-    } else {
-        console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
-        return
-    }
-
-    console.log("Executando a instrução SQL: \n" + instrucaoSql);
-    return database.executar(instrucaoSql);
-}
 
 function buscarUltimasMedidas(idOrigem, limite_linhas) {
 
@@ -42,7 +23,7 @@ function buscarUltimasMedidas(idOrigem, limite_linhas) {
     return database.executar(instrucaoSql);
 }
 
-function buscarUltimasMedidas2(idOrigem, limite_linhas) {
+function buscarUltimasMedidas2() {
 
     instrucaoSql = ''
 

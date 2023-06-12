@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COLOQUE O CHAP EU!</title>
+    <title>COLOQUE O CHAPÉU!</title>
     <link rel="stylesheet" href="../css/styleQuiz.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -24,7 +24,6 @@
         </ul>
     </div>
 </header>
-
 <body>
     <h1 id="tituloQuiz">Hora de saber a qual casa seu coração pertence...</h1>
     <span class="container_quiz">Você será apresentado com uma pergunta e várias opções de resposta. Sua tarefa é
@@ -168,7 +167,7 @@
     }
 
     function exibirResultado() {
-        var resultado = "Você pertence à casa: " + obterCasaSelecionada();
+        var resultado = "Você pertence à casa: " + obterCasaSelecionada() + ", realize sua matrícula.";
         resultadoDiv.innerText = resultado;
 
         perguntaDiv.style.display = "none";

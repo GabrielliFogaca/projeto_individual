@@ -7,7 +7,7 @@ router.get("/ultimas/:idOrigem", function (req, res) {
     medidaController.buscarUltimasMedidas(req, res);
 });
 
-router.get("/ultimas/:idOrigem", function (req, res) {
+router.get("/ultimas2", function (req, res) {
     medidaController.buscarUltimasMedidas2(req, res);
 });
 
