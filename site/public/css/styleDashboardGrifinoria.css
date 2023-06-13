@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: ABeeZee, 'Courier New', Courier, monospace;
+    background-image: url(../assets/img/background_grifinoria.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Organização, disposição e cores navbar */
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+header {
+    background-color: #012326;
+    border-bottom: 3px #c0c0c0 solid;
+}
+
+
+.agora {
+    font-weight: 900;
+}
+
+header .container {
+    justify-content: space-between;
+}
+
+header a {
+    text-decoration: none;
+    color: #c0c0c0;
+}
+
+.navbar {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.btn-logout {
+    margin: 0;
+    padding: 0;
+    background-color: #c0c0c0;
+    color: rgb(11, 114, 2);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+
+.btn-sair-sonserina {
+    margin: 0;
+    padding: 0;
+    border: 2px solid #c0c0c0;
+    color: rgb(11, 114, 2);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+
+/* Mensagem de saudação ao usuário */
+.hello {
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    text-shadow: 1px 7px 10px #0c0c0cbb;
+
+}
+
+.hello h3 {
+    color: #78e362;
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.hello h3 span {
+    font-weight: 800;
+}
+
+/* Página de feitiços */
+
+.subtitulo {
+    text-decoration: wavy;
+    font-size: 20px;
+}
+
+
+.container_feiticos {
+    padding: 5% 13% 10% 13%;
+    display: flex;
+    color: #0e3100;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.manualFeiticos {
+    text-shadow: 1px 1px 2px #424242;
+    background-color: #c0c0c075;
+    text-align: center;
+    padding: 3% 20% 3% 20%;
+    border-radius: 10px;
+}
+
+.cards_feiticos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards_feiticos h3 {
+    padding: 20px;
+}
+
+main.cards_feiticos section.cards1 {
+    background-color: #b7e99f91;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px;
+    border-radius: 8px;
+    max-height: 500px;
+    max-width: 300px;
+    margin-left: 36px;
+    margin-bottom: 30px;
+
+}
+
+main.cards_feiticos section.cards2 {
+    background-color: #b7e99f91;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px;
+    border-radius: 8px;
+    max-height: 500px;
+    max-width: 300px;
+    margin-left: 36px;
+    margin-bottom: 30px;
+
+}
+
+main.cards_feiticos section.cards3 {
+    background-color: #b7e99f91;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px;
+    border-radius: 8px;
+    max-height: 500px;
+    max-width: 300px;
+    margin-left: 36px;
+    margin-bottom: 30px;
+
+}
+
+main.cards_feiticos section.cards4 {
+    background-color: #b7e99f91;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px;
+    border-radius: 8px;
+    max-height: 500px;
+    max-width: 300px;
+    margin-left: 26px;
+    margin-bottom: 30px;
+}
+
+main.cards_feiticos section.cards5 {
+    background-color: #b6e99f91;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px;
+    border-radius: 8px;
+    max-height: 500px;
+    max-width: 300px;
+    margin-left: 36px;
+    margin-bottom: 30px;
+
+}
+
+/* Pagina principal */
+
+/* Graficos */
+
+#content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#content {
+    background-color: #c0c0c0;
+
+}
+
+#graficos {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#slide{
+    padding: 2%;
+    width: 40vw;
+    height:37vh;
+    border-bottom: 2px solid #fff;
+    border: 1px dashed #012326;
+    border-radius: 20px;
+    background-color: #b2ec9b73;
+
+}
+
+#slide2{
+    padding: 2%;
+    width: 40vw;
+    height:37vh;
+    border-bottom: 2px solid #fff;
+    border: 1px dashed #012326;
+    border-radius: 20px;
+    background-color: #b2ec9b73;
+
+}
+
+/* Textos */
+
+#topo {
+    margin: 7% 10% 5% 10%;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    border: 10px double #012326;
+    border-radius: 20px;
+    transition: color.5s ease-in;
+    background-color: #82ff4818;
+    backdrop-filter: blur(2px);
+    backdrop-filter: drop-shadow(90%);
+    color: #c0c0c0;
+
+
+}
+
+#topo:hover {
+    border: 10px double #719396;
+    color: #012326;
+    transition: color.5s ease-in;
+
+}
+
+
+
+#sequencia {
+    padding-top: 55px;
+    padding-bottom: 75px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.subtitulo {
+    color: #78e362;
+    text-shadow: 1px 7px 10px #0c0c0cbb;
+    
+
+}
+
+#titulosGraficos {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    
+}
+
+#esquerda {
+    border-bottom: 2px solid #fff;
+    margin-right: 4%;
+    padding: 2%;
+    border: 1px dashed #012326;
+    border-radius: 20px;
+    background-color: #b2ec9b73;
+    box-shadow: 1px 7px 10px #0c0c0cbb;
+
+}
+
+#direita {
+    border-bottom: 2px solid #fff;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 2%;
+    border: 1px dashed #012326;
+    border-radius: 20px;
+    background-color: #b2ec9b73;
+    box-shadow: 1px 7px 10px #0c0c0cbb;
+}
+
+.container_bruxos {
+    margin-top: 2%;
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.manualBruxos {
+    text-shadow: 1px 1px 2px #424242;
+    color: #ffff;
+    border-top: 2px solid #c0c0c0;
+    text-align: center;
+    padding: 2%;
+}
+
+.finalBruxos {
+    text-shadow: 1px 1px 2px #424242;
+    color: #ffff;
+    text-align: center;
+    padding: 3%;
+}
+
+/* Conteúdos do footer */
+
+#container_rodape {
+    background-color: #012326;
+    color: black;
+    border-top: 3px #c0c0c0 solid;
+    margin-top: 100px;
+}
+
+#logo_rodape {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}  
+
+#informacoes_rodape span {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    color: #c0c0c0;
+    font-weight: 900;
+    font-size: 20px;
+
+}

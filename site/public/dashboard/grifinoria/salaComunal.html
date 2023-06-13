@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sala Comunal Sonserina</title>
+    <link rel="stylesheet" href="../../css/styleDashboardGrifinoria.css" />
+
+    <!-- scripts do Chart.js - 2022-1 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/3f0399636b.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+
+
+</head>
+<header>
+    <div class="container">
+        <h1 class="logo">
+            <a href="../../index.html"><img src="../../assets/icons/logo_sonserina.png" alt="" width="100px" /></a>
+        </h1>
+        <ul class="navbar">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#"> </a></li>
+            <li><a href="#"> </a></li>
+            <li class="agora"><a href="salaComunal.html">Sala Comunal</a></li>
+            <li><a href="estudos.html">Estudos</a></li>
+            <div class="btn-logout" onclick="limparSessao()">
+                <h3>Sair</h3>
+            </div>
+
+        </ul>
+    </div>
+</header>
+
+<body onload="obterDadosGraficos()">
+    <div class="hello">
+        <h3>Saudações, <span id="b_usuario">usuário</span>, da casa <span id="b_casa">SONSERINA</span>!</h3>
+    </div>
+
+
+    <div id="topo">
+        <h2 class="titulo">Agora você é definitivamente um aluno. Está preparado para viver a magia?</h2>
+
+    </div>
+    <div id="sequencia">
+        <h2 class="subtitulo">Saiba algumas curiosidades antes de começar</h2>
+    </div>
+
+
+    <div id="titulosGraficos">
+        <div id="esquerda">
+            <h2>Saiba quais as origens dos bruxos desta escola</h2>
+        </div>
+        <div id="direita">
+            <h2>Quantidade de alunos em cada casa</h2>
+        </div>
+    </div>
+
+    <div id="graficos">
+
+        <div id="slide">
+
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <div id="slide2">
+            <canvas id="myChart2"></canvas>
+
+        </div>
+    </div>
+    <div class="container_bruxos">
+        <div class="manualBruxos">
+            <h1>BRUXOS QUE FIZERAM HISTÓRIA</h1><br><br>
+            <p>Conheça dos bruxos que fizeram história na casa a qual você faz parte.</p>
+        </div>
+                </div>
+
+
+        </div>
+        <main class="cards_feiticos">
+            <section class="cards1">
+                <img src="../../assets/img/Salazar_Slytherin.png" alt="" width="200px">
+                <h3>Salazar Slytherin</h3>
+                Um dos quatro fundadores de Hogwarts e um dos primeiros bruxos a praticar a magia das trevas. Ele valorizava a pureza do sangue e acreditava que apenas bruxos de linhagem mágica deveriam ser admitidos em Hogwarts. Slytherin deixou um legado na casa Sonserina e sua crença na supremacia dos sangues puros ainda ecoa no universo de Harry Potter. <br>
+                </section>
+    
+                <section class="cards1">
+                    <img src="../../assets/img/severo_snape.png" alt="" width="200px">
+    
+                    <h3>Severus Snape</h3>
+                    Um membro dedicado da Sonserina e se tornou professor de Poções em Hogwarts. Apesar de suas aparências sombrias e de sua reputação questionável, Snape desempenhou um papel crucial na luta contra o Lord das Trevas, agindo como espião duplo e protegendo o segredo de Harry. Sua lealdade e sacrifício o tornaram uma figura icônica na Sonserina.<br>
+                </section>
+
+            <section class="cards1">
+                <img src="../../assets/img/Tom_Riddle.png" alt="" width="200px">
+
+                <h3>Tom Riddle</h3>
+                Mais conhecido como Lord Voldemort, foi um dos bruxos mais poderosos e temidos na história da magia. Ele foi um aluno notável da casa Sonserina em Hogwarts, onde desenvolveu suas habilidades sombrias e ambições de conquista. Voldemort deixou um impacto significativo não apenas na Sonserina, mas em toda a comunidade bruxa, enquanto buscava o poder e a imortalidade. <br>
+                
+            </section>
+        </main>
+
+  
+        <div class="finalBruxos">
+            <p>Esses três bruxos têm histórias e contribuições significativas dentro da casa Sonserina, cada um deles deixando sua marca de alguma forma. Eles representam diferentes facetas da casa, desde a lealdade e sacrifício até a ambição e a busca pelo poder.</p>
+        </div>
+        
+
+
+
+        <div class="container_bruxos">
+            <div class="manualBruxos">
+                <h1>Agora acreditamos que você já está por dentro dos detalhes de sua casa.</h1><br><br>
+                <h4>Acesse a aba estudos, para treinar os feitiços preparatórios antes do início das aulas.</h4>
+                </div></div>
+
+  
+</body>
+<footer>
+
+    <div id="container_rodape">
+ 
+    <div id="logo_rodape">
+
+      <img src="/site/public/assets/img/logo.png" alt="Logo rodapé" width="150px">
+
+    </div>
+
+    <div id="informacoes_rodape">
+
+      <span>QUE A MAGIA ESTEJA COM VOCÊ ♥ </span>
+
+    </div>
+</div>
+  </footer>
+
+</html>
+
+
+<script>
+
+
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+
+    let proximaAtualizacao;
+
+
+
+    function obterDadosGraficos() {
+        obterDadosGrafico(),
+            grafich2()
+    }
+
+
+    function obterDadosGrafico(idOrigem) {
+
+        if (proximaAtualizacao != undefined) {
+            clearTimeout(proximaAtualizacao);
+        }
+
+
+        fetch(`/medidas/ultimas/${idOrigem}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    plotarGrafico(resposta, idOrigem);
+
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
+    function grafich2() {
+
+        fetch(`/medidas/ultimas2`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta2) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta2)}`);
+                    plotarGrafico2(resposta2);
+
+
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+    function plotarGrafico2(resposta2) {
+
+        console.log('iniciando plotagem do gráfico...');
+
+        // Criando estrutura para plotar gráfico - labels
+        let labels = [];
+
+        // Criando estrutura para plotar gráfico - dados
+        let dados = {
+            labels: labels,
+            datasets: [{
+                label: 'Quantidade de alunos por casa',
+                data: [],
+                fill: true,
+                backgroundColor: ['#740001', '#ffdb00', '#134b95', '#2a623d'],
+                borderColor: '#000000',
+
+            }]
+        };
+
+
+
+        // Inserindo valores recebidos em estrutura para plotar o gráfico
+        for (i = 0; i < resposta2.length; i++) {
+            var registro = resposta2[i];
+            labels.push(registro.Casa);
+            dados.datasets[0].data.push(registro.Qtd);
+
+        }
+
+
+        // Criando estrutura para plotar gráfico - config
+        const config = {
+            type: 'bar',
+            data: dados,
+        };
+
+        // Adicionando gráfico criado em div na tela
+        let myChart = new Chart(
+            document.getElementById(`myChart2`),
+            config
+        );
+
+
+    }
+
+
+
+
+    // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
+    // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
+    // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+    function plotarGrafico(resposta, idOrigem) {
+        console.log('iniciando plotagem do gráfico...');
+
+        var dados = {
+            labels: [],
+            datasets: [
+                {
+                    label: '',
+
+                    data: []
+                },
+                {
+                    label: 'Origem dos bruxos da escola',
+                    backgroundColor: ['#a97d47', '#5a4a42', '#e1d4e5'],
+                    borderColor: '#000000',
+                    fill: true,
+                    data: []
+                }
+            ]
+        };
+
+
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            dados.labels.push(registro.origem);
+            dados.datasets[0].data.push(registro.origem);
+            dados.datasets[1].data.push(registro.Qtd);
+            console.log(registro.Qtd)
+
+
+        }
+
+        console.log(JSON.stringify(dados));
+
+        var ctx = myChart.getContext('2d');
+        window.myChart = Chart.Bar(ctx, {
+            data: dados,
+            options: {
+                responsive: true,
+                animation: { duration: 900 },
+                hoverMode: 'index',
+                stacked: false,
+                title: {
+                    display: true,
+                },
+
+                scales: {
+                    yAxes: [{
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        id: 'y-totalorigem',
+                        ticks: {
+                            beginAtZero: true,
+                            max: 32,
+                            min: 0
+                        }
+                    }, {
+                        display: false,
+                    }],
+                }
+            }
+        });
+
+
+
+        // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
+        // buscando a última medida inserida em tabela contendo as capturas, 
+
+        //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
+        //     Para ajustar o "select", ajuste o comando sql em src/models
+        function atualizarGrafico(dados) {
+
+            fetch(`/medidas/tempo-real/${idOrigem}`, { cache: 'no-store' }).then(function (response) {
+                if (response.ok) {
+                    response.json().then(function (novoRegistro) {
+
+                        console.log(`Dados recebidos Atualizar  Graficos: ${JSON.stringify(novoRegistro)}`);
+                        console.log(dados);
+
+                        for (i = 0; i < novoRegistro.length; i++) {
+                            var registro = novoRegistro[i];
+                            // tirando e colocando valores no gráfico
+                            dados.labels.shift(); // apagar o primeiro
+                            dados.labels.push(registro.origem);// incluir um novo momento
+
+                            dados.datasets[0].data.shift();  // apagar o primeiro de umidade
+                            dados.datasets[0].data.push(registro.origem); // incluir uma nova medida de umidade
+
+                            dados.datasets[1].data.shift();
+                            dados.datasets[1].data.push(registro.Qtd);
+                        }
+
+                        window.myChart.update();
+
+                        // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+                        proximaAtualizacao = setTimeout(() => atualizarGrafico(idOrigem, dados), 2000);
+                    });
+                } else {
+                    console.error('Nenhum dado encontrado ou erro na API');
+                    // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+                    proximaAtualizacao = setTimeout(() => atualizarGrafico(idOrigem, dados), 200000);
+                }
+            })
+                .catch(function (error) {
+                    console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+                });
+
+        }
+
+
+
+        //  SEGUNDO GRAFICO
+
+    }
+
+
+
+</script>
