@@ -40,35 +40,37 @@
         <h3>Saudações, <span id="b_usuario">usuário</span>, da casa <span id="b_casa">SONSERINA</span>!</h3>
     </div>
 
-    <span>Agora você é definitivamente um aluno. Está preparado para viver a magia?</span>
-    <span>Saiba algumas curiosidades sobre a escola</span>
 
-    <div id="titulosGraficos">
-        <div id="esquerda"><h2>Saiba quais as origens dos bruxos desta escola</h2></div>
-        <div id="direita"><h2>Quantidade de alunos em cada casa</h2></div>
+    <div id="topo">
+        <h2 class="titulo">Agora você é definitivamente um aluno. Está preparado para viver a magia?</h2>
+
+    </div>
+    <div id="sequencia">
+        <h2 class="subtitulo">Saiba algumas curiosidades antes de começar</h2>
     </div>
 
-    <div id="content">
-        <div class="slide-show select-disable">
-  
-            <ul class="slides-list">
-                <li class="slide">
-                    <canvas id="myChart"></canvas>
-                </li>
-            </ul>
 
+    <div id="titulosGraficos">
+        <div id="esquerda">
+            <h2>Saiba quais as origens dos bruxos desta escola</h2>
+        </div>
+        <div id="direita">
+            <h2>Quantidade de alunos em cada casa</h2>
+        </div>
+    </div>
+
+    <div id="graficos">
+
+        <div id="slide">
+
+            <canvas id="myChart"></canvas>
         </div>
 
-        <div id="content">
-            <div class="slide-show select-disable">
-                <ul class="slides-list">
-                    <li class="slide2">
-                        <canvas id="myChart2"></canvas>
-                    </li>
-                </ul>
+        <div id="slide2">
+            <canvas id="myChart2"></canvas>
 
-            </div>
-
+        </div>
+    </div>
 
 </body>
 
@@ -87,7 +89,7 @@
 
     function obterDadosGraficos() {
         obterDadosGrafico(),
-        grafich2()
+            grafich2()
     }
 
 
@@ -116,66 +118,66 @@
 
     function grafich2() {
 
-fetch(`/medidas/ultimas2`, { cache: 'no-store' }).then(function (response) {
-    if (response.ok) {
-        response.json().then(function (resposta2) {
-            console.log(`Dados recebidos: ${JSON.stringify(resposta2)}`);
-            plotarGrafico2(resposta2);
-        
+        fetch(`/medidas/ultimas2`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta2) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta2)}`);
+                    plotarGrafico2(resposta2);
 
-        });
-    } else {
-        console.error('Nenhum dado encontrado ou erro na API');
+
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
     }
-})
-    .catch(function (error) {
-        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-    });
-}
-function plotarGrafico2(resposta2) {
+    function plotarGrafico2(resposta2) {
 
-console.log('iniciando plotagem do gráfico...');
+        console.log('iniciando plotagem do gráfico...');
 
-// Criando estrutura para plotar gráfico - labels
-let labels = [];
+        // Criando estrutura para plotar gráfico - labels
+        let labels = [];
 
-// Criando estrutura para plotar gráfico - dados
-let dados = {
-    labels: labels,
-    datasets: [{
-        label: 'Quantidade de alunos por casa',
-        data: [],
-        fill: true,
-        backgroundColor: ['#A65A49', '#96D9D9', '#011F26','#A65A49'],
-        borderColor: '#000',
-        tension: 0.1
-        
-    }]
-};
+        // Criando estrutura para plotar gráfico - dados
+        let dados = {
+            labels: labels,
+            datasets: [{
+                label: 'Quantidade de alunos por casa',
+                data: [],
+                fill: true,
+                backgroundColor: ['#A65A49', '#96D9D9', '#011F26', '#A65A49'],
+                borderColor: '#000',
+                tension: 0.1
 
-// Inserindo valores recebidos em estrutura para plotar o gráfico
-for (i = 0; i < resposta2.length; i++) {
-    var registro = resposta2[i];
-    labels.push(registro.Casa);
-    dados.datasets[0].data.push(registro.Qtd);
-   
-}
+            }]
+        };
+
+        // Inserindo valores recebidos em estrutura para plotar o gráfico
+        for (i = 0; i < resposta2.length; i++) {
+            var registro = resposta2[i];
+            labels.push(registro.Casa);
+            dados.datasets[0].data.push(registro.Qtd);
+
+        }
 
 
-// Criando estrutura para plotar gráfico - config
-const config = {
-    type: 'bar',
-    data: dados,
-};
+        // Criando estrutura para plotar gráfico - config
+        const config = {
+            type: 'bar',
+            data: dados,
+        };
 
-// Adicionando gráfico criado em div na tela
-let myChart = new Chart(
-    document.getElementById(`myChart2`),
-    config
-);
+        // Adicionando gráfico criado em div na tela
+        let myChart = new Chart(
+            document.getElementById(`myChart2`),
+            config
+        );
 
 
-}
+    }
 
 
 
@@ -297,8 +299,8 @@ let myChart = new Chart(
 
         //  SEGUNDO GRAFICO
 
-  }
+    }
 
-   
+
 
 </script>

@@ -64,6 +64,8 @@ header a {
     display: flex;
     justify-content: center;
     padding-top: 20px;
+    text-shadow: 1px 7px 10px #0c0c0cbb;
+
 }
 
 .hello h3 {
@@ -179,6 +181,10 @@ main.cards_feiticos section.cards5 {
 
 }
 
+/* Pagina principal */
+
+/* Graficos */
+
 #content {
     display: flex;
     justify-content: space-around;
@@ -186,22 +192,108 @@ main.cards_feiticos section.cards5 {
     margin-top: 50px;
 }
 
-.slides-list {
+#content {
     background-color: #c0c0c0;
 
 }
 
-.slide{
-    width: 30vw;
-    height:37vh;
+#graficos {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.slide2{
-    width: 30vw;
+#slide{
+    padding: 2%;
+    width: 40vw;
     height:37vh;
+    border-bottom: 2px solid #fff;
+    border: 1px dashed #012326;
+    border-radius: 20px;
+    background-color: #b2ec9b73;
+
+}
+
+#slide2{
+    padding: 2%;
+    width: 40vw;
+    height:37vh;
+    border-bottom: 2px solid #fff;
+    border: 1px dashed #012326;
+    border-radius: 20px;
+    background-color: #b2ec9b73;
+
+}
+
+/* Textos */
+
+#topo {
+    margin: 7% 10% 5% 10%;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    border: 10px double #012326;
+    border-radius: 20px;
+    transition: color.5s ease-in;
+    background-color: #82ff4818;
+    backdrop-filter: blur(2px);
+    backdrop-filter: drop-shadow(90%);
+    color: #c0c0c0;
+
+
+}
+
+#topo:hover {
+    border: 10px double #719396;
+    color: #012326;
+    transition: color.5s ease-in;
+
+}
+
+
+
+#sequencia {
+    padding-top: 55px;
+    padding-bottom: 75px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.subtitulo {
+    color: #78e362;
+    text-shadow: 1px 7px 10px #0c0c0cbb;
+    
+
 }
 
 #titulosGraficos {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    text-align: center;
+    
+}
+
+#esquerda {
+    border-bottom: 2px solid #fff;
+    margin-right: 4%;
+    padding: 2%;
+    border: 1px dashed #012326;
+    border-radius: 20px;
+    background-color: #b2ec9b73;
+    box-shadow: 1px 7px 10px #0c0c0cbb;
+
+}
+
+#direita {
+    border-bottom: 2px solid #fff;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 2%;
+    border: 1px dashed #012326;
+    border-radius: 20px;
+    background-color: #b2ec9b73;
+    box-shadow: 1px 7px 10px #0c0c0cbb;
+
+
 }
