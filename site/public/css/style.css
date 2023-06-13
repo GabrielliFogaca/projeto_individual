@@ -355,8 +355,6 @@ header a {
 .botaoAcesso {
     width: 50%;
     padding: 16px 0px;
-    margin: 25px;
-    margin-left: 25%;
     border: none;
     border-radius: 10px;
     font-weight: 800;
@@ -413,7 +411,7 @@ header a {
     
 
 .cardLoginCadastro {
-    width: 60%;
+    width: 80%;
     justify-content: center;
     align-items: center;
     padding: 30px 35px;
@@ -430,11 +428,12 @@ header a {
 }
 
 .areaImagemCadastro {
-    width: 60%;
+    width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding-top: 30px;
 }
 

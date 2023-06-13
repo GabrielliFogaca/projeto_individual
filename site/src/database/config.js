@@ -22,7 +22,7 @@ var mySqlConfig = {
     host: "localhost",
     database: "hogwarts",
     user: "root",
-    password: "sptech",
+    password: "#Neural24mysql",
 };
 
 function executar(instrucao) {
