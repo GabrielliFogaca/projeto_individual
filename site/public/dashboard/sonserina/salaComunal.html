@@ -71,7 +71,45 @@
 
         </div>
     </div>
+    <div class="container_bruxos">
+        <div class="manualBruxos">
+            <h1>BRUXOS QUE FIZERAM HISTÓRIA</h1><br><br>
+            <p>Conheça dos bruxos que fizeram história na casa a qual você faz parte.</p>
+        </div>
+                </div>
 
+
+        </div>
+        <main class="cards_feiticos">
+            <section class="cards1">
+                <img src="../../assets/img/Salazar_Slytherin.png" alt="" width="200px">
+                <h3>Salazar Slytherin</h3>
+                Um dos quatro fundadores de Hogwarts e um dos primeiros bruxos a praticar a magia das trevas. Ele valorizava a pureza do sangue e acreditava que apenas bruxos de linhagem mágica deveriam ser admitidos em Hogwarts. Slytherin deixou um legado na casa Sonserina e sua crença na supremacia dos sangues puros ainda ecoa no universo de Harry Potter. <br>
+                </section>
+    
+                <section class="cards1">
+                    <img src="../../assets/img/severo_snape.png" alt="" width="200px">
+    
+                    <h3>Severus Snape</h3>
+                    Um membro dedicado da Sonserina e se tornou professor de Poções em Hogwarts. Apesar de suas aparências sombrias e de sua reputação questionável, Snape desempenhou um papel crucial na luta contra o Lord das Trevas, agindo como espião duplo e protegendo o segredo de Harry. Sua lealdade e sacrifício o tornaram uma figura icônica na Sonserina.<br>
+                </section>
+
+            <section class="cards1">
+                <img src="../../assets/img/Tom_Riddle.png" alt="" width="200px">
+
+                <h3>Tom Riddle</h3>
+                Mais conhecido como Lord Voldemort, foi um dos bruxos mais poderosos e temidos na história da magia. Ele foi um aluno notável da casa Sonserina em Hogwarts, onde desenvolveu suas habilidades sombrias e ambições de conquista. Voldemort deixou um impacto significativo não apenas na Sonserina, mas em toda a comunidade bruxa, enquanto buscava o poder e a imortalidade. <br>
+                
+            </section>
+        </main>
+
+        <div class="container_bruxos">
+            <div class="manualBruxos">
+                <h1>Agora acreditamos que você já está por dentro dos detalhes de sua casa.</h1><br><br>
+                <h4>Acesse a aba estudos, para treinar os feitiços preparatórios antes do início das aulas.</h4>
+                </div></div>
+
+  
 </body>
 
 </html>
@@ -148,12 +186,13 @@
                 label: 'Quantidade de alunos por casa',
                 data: [],
                 fill: true,
-                backgroundColor: ['#A65A49', '#96D9D9', '#011F26', '#A65A49'],
-                borderColor: '#000',
-                tension: 0.1
+                backgroundColor: ['#740001', '#ffdb00', '#134b95', '#2a623d'],
+                borderColor: '#000000',
 
             }]
         };
+
+
 
         // Inserindo valores recebidos em estrutura para plotar o gráfico
         for (i = 0; i < resposta2.length; i++) {
@@ -197,10 +236,9 @@
                     data: []
                 },
                 {
-                    yAxisID: 'y-totalorigem',
                     label: 'Origem dos bruxos da escola',
-                    backgroundColor: ['#A65A49', '#96D9D9', '#011F26'],
-                    borderColor: '#000',
+                    backgroundColor: ['#a97d47', '#5a4a42', '#e1d4e5'],
+                    borderColor: '#000000',
                     fill: true,
                     data: []
                 }
@@ -249,6 +287,7 @@
                 }
             }
         });
+
 
 
         // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
