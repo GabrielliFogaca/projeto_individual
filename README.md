@@ -17,8 +17,4 @@ Ao longo dos sete livros da saga, Harry Potter e seus amigos enfrentam diversos 
 A saga Harry Potter ganhou enorme popularidade em todo o mundo, conquistando uma base de fãs dedicada e inspirando diversas adaptações cinematográficas de sucesso. Os livros exploram temas como amizade, coragem, lealdade e a importância de fazer escolhas certas, tornando-se uma fonte de inspiração para muitos leitores e fãs.
 
 
-# Agradecimentos
-Agradecemos a J.K. Rowling por criar um universo mágico tão cativante e inspirador. Também agradecemos à comunidade de desenvolvedores e fãs de Harry Potter, cujo amor pela saga continua a alimentar projetos como este.
-
-
 Divirta-se e que a magia esteja com você!
