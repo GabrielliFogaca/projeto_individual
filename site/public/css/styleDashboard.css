@@ -58,6 +58,18 @@ header a {
     cursor: pointer;
 }
 
+
+.btn-sair-sonserina {
+    margin: 0;
+    padding: 0;
+    background-color: #701d1d;
+    color: rgb(11, 114, 2);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+
 /* Mensagem de saudação ao usuário */
 .hello {
     width: 100%;
@@ -299,6 +311,7 @@ main.cards_feiticos section.cards5 {
 }
 
 .container_bruxos {
+    margin-top: 5%;
     padding: 5%;
     display: flex;
     flex-wrap: wrap;
@@ -312,4 +325,29 @@ main.cards_feiticos section.cards5 {
     border-top: 2px solid #c0c0c0;
     text-align: center;
     padding: 3%;
+}
+
+/* Conteúdos do footer */
+
+#container_rodape {
+    background-color: #012326;
+    color: black;
+    border-top: 3px #F29F05 solid;
+    margin-top: 100px;
+}
+
+#logo_rodape {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}  
+
+#informacoes_rodape span {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    color: #F29F05;
+    font-weight: 900;
+    font-size: 20px;
+
 }
