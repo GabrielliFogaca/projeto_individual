@@ -191,22 +191,17 @@ main.cards_feiticos section.cards5 {
 
 }
 
-.slide-show h2{
-margin-top: -14px;
-}
-
 .slide{
-    width: 40vw;
-    height:47vh;
+    width: 30vw;
+    height:37vh;
 }
 
 .slide2{
-    width: 40vw;
-    height:45vh;
+    width: 30vw;
+    height:37vh;
 }
 
-
-.grafico{
-    width: 20vw;
-    height: 20vh;
+#titulosGraficos {
+    display: flex;
+    justify-content: space-around;
 }
