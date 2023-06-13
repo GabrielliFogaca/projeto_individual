@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
 }
-
+ 
 body {
     font-family: ABeeZee, 'Courier New', Courier, monospace;
     background-image: url(../assets/img/background_grifinoria.jpg);
@@ -21,8 +21,8 @@ body {
 }
 
 header {
-    background-color: #012326;
-    border-bottom: 3px #c0c0c0 solid;
+    background-color: #740001;
+    border-bottom: 3px #F29F05 solid;
 }
 
 
@@ -36,7 +36,7 @@ header .container {
 
 header a {
     text-decoration: none;
-    color: #c0c0c0;
+    color: #F29F05;
 }
 
 .navbar {
@@ -50,7 +50,7 @@ header a {
 .btn-logout {
     margin: 0;
     padding: 0;
-    background-color: #c0c0c0;
+    background-color: #F29F05;
     color: rgb(11, 114, 2);
     border-radius: 10px;
     text-align: center;
@@ -62,7 +62,7 @@ header a {
 .btn-sair-sonserina {
     margin: 0;
     padding: 0;
-    border: 2px solid #c0c0c0;
+    border: 2px solid #F29F05;
     color: rgb(11, 114, 2);
     border-radius: 10px;
     text-align: center;
@@ -82,7 +82,7 @@ header a {
 }
 
 .hello h3 {
-    color: #78e362;
+    color: #F29F05;
     font-weight: 300;
     font-size: 25px;
 }
@@ -102,7 +102,7 @@ header a {
 .container_feiticos {
     padding: 5% 13% 10% 13%;
     display: flex;
-    color: #0e3100;
+    color: #ffffff;
 
     flex-wrap: wrap;
     justify-content: center;
@@ -111,7 +111,7 @@ header a {
 
 .manualFeiticos {
     text-shadow: 1px 1px 2px #424242;
-    background-color: #c0c0c075;
+    background-color: #70000075;
     text-align: center;
     padding: 3% 20% 3% 20%;
     border-radius: 10px;
@@ -207,7 +207,7 @@ main.cards_feiticos section.cards5 {
 }
 
 #content {
-    background-color: #c0c0c0;
+    background-color: #F29F05;
 
 }
 
@@ -222,7 +222,7 @@ main.cards_feiticos section.cards5 {
     width: 40vw;
     height:37vh;
     border-bottom: 2px solid #fff;
-    border: 1px dashed #012326;
+    border: 1px dashed #740001;
     border-radius: 20px;
     background-color: #b2ec9b73;
 
@@ -233,7 +233,7 @@ main.cards_feiticos section.cards5 {
     width: 40vw;
     height:37vh;
     border-bottom: 2px solid #fff;
-    border: 1px dashed #012326;
+    border: 1px dashed #740001;
     border-radius: 20px;
     background-color: #b2ec9b73;
 
@@ -246,20 +246,20 @@ main.cards_feiticos section.cards5 {
     padding: 5%;
     display: flex;
     justify-content: center;
-    border: 10px double #012326;
+    border: 10px double #740001;
     border-radius: 20px;
     transition: color.5s ease-in;
     background-color: #82ff4818;
     backdrop-filter: blur(2px);
     backdrop-filter: drop-shadow(90%);
-    color: #c0c0c0;
+    color: #F29F05;
 
 
 }
 
 #topo:hover {
-    border: 10px double #719396;
-    color: #012326;
+    border: 10px double #F29F05;
+    color: #740001;
     transition: color.5s ease-in;
 
 }
@@ -276,7 +276,7 @@ main.cards_feiticos section.cards5 {
 
 
 .subtitulo {
-    color: #78e362;
+    color: #F29F05;
     text-shadow: 1px 7px 10px #0c0c0cbb;
     
 
@@ -293,7 +293,7 @@ main.cards_feiticos section.cards5 {
     border-bottom: 2px solid #fff;
     margin-right: 4%;
     padding: 2%;
-    border: 1px dashed #012326;
+    border: 1px dashed #740001;
     border-radius: 20px;
     background-color: #b2ec9b73;
     box-shadow: 1px 7px 10px #0c0c0cbb;
@@ -305,7 +305,7 @@ main.cards_feiticos section.cards5 {
     margin-left: 5%;
     margin-right: 5%;
     padding: 2%;
-    border: 1px dashed #012326;
+    border: 1px dashed #740001;
     border-radius: 20px;
     background-color: #b2ec9b73;
     box-shadow: 1px 7px 10px #0c0c0cbb;
@@ -323,7 +323,7 @@ main.cards_feiticos section.cards5 {
 .manualBruxos {
     text-shadow: 1px 1px 2px #424242;
     color: #ffff;
-    border-top: 2px solid #c0c0c0;
+    border-top: 2px solid #F29F05;
     text-align: center;
     padding: 2%;
 }
@@ -338,9 +338,9 @@ main.cards_feiticos section.cards5 {
 /* Conteúdos do footer */
 
 #container_rodape {
-    background-color: #012326;
+    background-color: #740001;
     color: black;
-    border-top: 3px #c0c0c0 solid;
+    border-top: 3px #F29F05 solid;
     margin-top: 100px;
 }
 
@@ -354,7 +354,7 @@ main.cards_feiticos section.cards5 {
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
-    color: #c0c0c0;
+    color: #F29F05;
     font-weight: 900;
     font-size: 20px;
 
