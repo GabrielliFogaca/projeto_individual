@@ -110,9 +110,18 @@
 
                       sessionStorage.NOME_USUARIO = json.primeiroNome;
                       sessionStorage.ID_USUARIO = json.idUsuario;
+                      sessionStorage.CASA = json.fkCasa;
 
                       setTimeout(function () {
-                          window.location = "dashboard/sonserina/salaComunal.html";
+                        if (sessionStorage.CASA == 1) {
+                          window.location = "dashboard/grifinoria/salaComunal1.html";
+                        } else if (sessionStorage.CASA == 2) {
+                          window.location = "dashboard/lufalufa/salaComunal2.html";
+                        } else if (sessionStorage.CASA == 3) {
+                          window.location = "dashboard/corvinal/salaComunal3.html";
+                        } else if (sessionStorage.CASA == 4) {
+                          window.location = "dashboard/sonserina/salaComunal4.html";
+                        } 
                       }, 3000); // apenas para exibir o loading
 
                   });

@@ -45,7 +45,7 @@ header a {
     align-items: center;
     justify-content: space-evenly;
     list-style: none;
-}
+} 
 
 .btn-logout {
     margin: 0;
@@ -58,6 +58,9 @@ header a {
     cursor: pointer;
 }
 
+.btn-logout a {
+    color: #012326;
+}
 
 .btn-sair-sonserina {
     margin: 0;
