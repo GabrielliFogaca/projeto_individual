@@ -62,7 +62,7 @@ header a {
 .btn-sair-sonserina {
     margin: 0;
     padding: 0;
-    background-color: #701d1d;
+    border: 2px solid #c0c0c0;
     color: rgb(11, 114, 2);
     border-radius: 10px;
     text-align: center;
@@ -311,7 +311,7 @@ main.cards_feiticos section.cards5 {
 }
 
 .container_bruxos {
-    margin-top: 5%;
+    margin-top: 2%;
     padding: 5%;
     display: flex;
     flex-wrap: wrap;
@@ -324,6 +324,13 @@ main.cards_feiticos section.cards5 {
     color: #ffff;
     border-top: 2px solid #c0c0c0;
     text-align: center;
+    padding: 2%;
+}
+
+.finalBruxos {
+    text-shadow: 1px 1px 2px #424242;
+    color: #ffff;
+    text-align: center;
     padding: 3%;
 }
 
@@ -332,7 +339,7 @@ main.cards_feiticos section.cards5 {
 #container_rodape {
     background-color: #012326;
     color: black;
-    border-top: 3px #F29F05 solid;
+    border-top: 3px #c0c0c0 solid;
     margin-top: 100px;
 }
 
@@ -346,7 +353,7 @@ main.cards_feiticos section.cards5 {
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
-    color: #F29F05;
+    color: #c0c0c0;
     font-weight: 900;
     font-size: 20px;
 
