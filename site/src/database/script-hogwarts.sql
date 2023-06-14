@@ -52,6 +52,7 @@ INSERT INTO anoEstudo VALUES
 
 INSERT INTO usuario (primeiroNome, sobrenome, nickname, senha, fkOrigem, fkCasa, fkAno)
 VALUES 
+
 ('Gabrielli', 'Fogaca', 'GabiFogaca', 'sptech', 2, 2, 1),
 ('Aurelia', 'Wolfsbane', 'moonwhisperer', 'lunaris123', 2, 3, 1),
 ('Thaddeus', 'Hawthorne', 'spellbinder', 'arcane123', 1, 2, 2),
