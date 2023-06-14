@@ -219,8 +219,6 @@ main.cards_feiticos section.cards5 {
 
 #slide{
     padding: 2%;
-    width: 40vw;
-    height:37vh;
     border-bottom: 2px solid #fff;
     border: 1px dashed #134b95;
     border-radius: 20px;
@@ -230,8 +228,6 @@ main.cards_feiticos section.cards5 {
 
 #slide2{
     padding: 2%;
-    width: 40vw;
-    height:37vh;
     border-bottom: 2px solid #fff;
     border: 1px dashed #134b95;
     border-radius: 20px;

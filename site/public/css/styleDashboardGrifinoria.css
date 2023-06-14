@@ -50,7 +50,7 @@ header a {
 .btn-logout {
     margin: 0;
     padding: 0;
-    background-color: #F29F05;
+    border: 2px solid #F29F05 ;
     color: rgb(11, 114, 2);
     border-radius: 10px;
     text-align: center;
